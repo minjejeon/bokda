@@ -1,0 +1,20 @@
+{
+  "crtfc_key": "API 인증키",
+  "corp_code": "고유번호",
+  "bgn_de": "시작일(최초접수일)",
+  "end_de": "종료일(최초접수일)",
+  "last_reprt_at": "최종보고서 검색여부",
+  "pblntf_ty": "공시유형",
+  "pblntf_detail_ty": "공시상세유형",
+  "corp_cls": "법인구분",
+  "sort": "정렬",
+  "sort_mth": "정렬방법",
+  "page_no": "페이지 번호",
+  "page_count": "페이지 별 건수",
+  "rcept_no": "접수번호",
+  "bsns_year": "사업연도",
+  "reprt_code": "보고서 코드",
+  "fs_div": "개별/연결구분",
+  "sj_div": "재무제표구분",
+  "idx_cl_code": "지표분류코드"
+}

@@ -1,0 +1,22 @@
+# 환경
+venv/
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.so
+*.c
+.ipynb_checkpoints
+.DS_Store
+
+# 내부 테스트 관련 코드들 트래킹에서 제외
+_test.py
+_test*.py
+_test.ipynb
+_test*.ipynb
+_test
+_archive
+
+# 파일
+config.json
+Note.md

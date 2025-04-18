@@ -1,0 +1,3 @@
+graft examples/data
+# 특정 확장자만 포함하는 경우:
+# recursive-include examples/data *.csv *.xlsx *.txt
