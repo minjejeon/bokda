@@ -1,0 +1,56 @@
+# Workflow Name
+name: Build and Archive Wheels
+
+# 워크플로우 실행 조건 정의
+on:
+  push:
+    tags:
+      - 'v*' # v1.0.0, v1.0.1 등 'v'로 시작하는 태그가 push될 때 실행
+  workflow_dispatch: # Actions 탭에서 수동으로 실행 가능하도록 함
+
+jobs:
+  # 여러 환경에서 휠 파일을 빌드하고 아티팩트로 저장하는 Job
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }} # 실행할 OS 환경 지정
+    strategy:
+      fail-fast: false # 하나의 빌드가 실패해도 다른 빌드는 계속 진행
+      matrix:
+        # 빌드를 수행할 OS 목록 (필요한 환경만 선택 가능)
+        # 예: ubuntu-latest (Linux), windows-latest, macos-latest
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      # 1. 저장소 코드 가져오기
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. (선택 사항) ARM 빌드를 위한 QEMU 설정 (Linux 빌드 시)
+      - name: Set up QEMU
+        if: runner.os == 'Linux'
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: all # 또는 'arm64' 등 특정 아키텍처
+
+      # 3. cibuildwheel 실행하여 휠 빌드
+      #    pypa/cibuildwheel 액션이 내부적으로 python -m build --wheel 실행
+      - name: Build wheels with cibuildwheel
+        uses: pypa/cibuildwheel@v2.20.0 # 최신 버전 사용 권장
+        env:
+          # --- 빌드할 환경 지정 (매우 중요) ---
+          # 예: CPython 3.9와 3.11 버전용 휠만 빌드
+          CIBW_BUILD: "cp39-* cp311-*"
+          # 예: 특정 환경 빌드 건너뛰기 (예: musllinux, 32비트 윈도우)
+          CIBW_SKIP: "*-musllinux* *win32*"
+          # 필요한 다른 CIBW_* 환경 변수 설정 (예: 아키텍처)
+          # CIBW_ARCHS_LINUX: auto aarch64
+
+      # 4. 빌드된 휠 파일들을 아티팩트로 업로드 (★★ 핵심 ★★)
+      #    이 단계를 통해 빌드 결과물을 다운로드할 수 있게 됩니다.
+      - name: Upload wheels artifact
+        uses: actions/upload-artifact@v4
+        with:
+          # 아티팩트 이름 (OS별로 구분되도록 설정 권장)
+          name: python-wheels-${{ matrix.os }}-${{ github.sha }} # 예시: OS와 커밋 해시 포함
+          # 업로드할 파일 경로 (cibuildwheel의 기본 출력 폴더)
+          path: ./wheelhouse/*.whl
