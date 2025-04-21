@@ -9,7 +9,7 @@ requires = [
     "setuptools>=61",
     "wheel",
     "cython>=0.29", # Cython 버전은 필요시 조정
-    "numpy>=2.0",   # NumPy 2.x 헤더 사용 (NumPy 2.x 버전 사용), 기존 numpy>=2.1
+    "numpy>=1.26",   # NumPy 2.x 헤더 사용 (NumPy 2.x 버전 사용), 기존 numpy>=2.1, 2.0
 ]
 build-backend = "setuptools.build_meta"
 #backend-path = ["."] # setup.py(ext_modules 정의용)를 사용하기 위해, 일단 불필요
@@ -53,13 +53,13 @@ classifiers = [
 # 런타임 의존성 (Py3.9 + NumPy 2.0.2 기준 통합 및 조정)
 # =============================================
 dependencies = [
-    "numpy>=1.26,<2.2",        # NumPy 2.x 버전 사용 (NumPy 2.x 헤더 사용), numpy>=2.1,<2.2
-    "pandas>=2.0",            
+    "numpy==1.26.4",        # NumPy 2.x 버전 사용 (NumPy 2.x 헤더 사용), numpy>=2.1,<2.2, numpy>=1.26,<2.0.2
+    "pandas==1.5.3",           # 기존 pandas>=2.0
     "scipy>=1.13,<1.15",       # 2차 setup.py 기준 (Py3.11/NumPy2.x 호환 확인됨), 기존 scipy>=1.14,<1.15
     "statsmodels>=0.14,<0.15",
     "matplotlib>=3.8.2",      
     "seaborn>=0.13.0",        
-    "linearmodels>=6.0",      # linearmodels>=6.0
+    "linearmodels==6.1",      # linearmodels>=6.0
     "openpyxl",               
     "tqdm",                   
     "threadpoolctl>=3.5,<3.6", # 2차 setup.py 기준
