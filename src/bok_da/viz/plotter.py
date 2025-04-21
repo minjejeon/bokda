@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import platform
 
 def fix_lims(ax=None):
     ax = ax or plt.gca()
@@ -97,14 +98,16 @@ class Plotter:
         
         
         #### 내외부망 이부분 수정 필요 ####
-        self.font = kwargs.pop('font', ['Arial', 'Gulim'])
-        plt.rcParams['font.family'] = self.font
-        #self.font = kwargs.pop('font', ['NanumGothicCoding'])
-        #plt.rcParams['font.family'] = self.font
-        #mpl.rcParams.update(mpl.rcParamsDefault) ### 임의수정
-        #mpl.rcParams['axes.unicode_minus'] = False ### 임의수정
+        if platform.system() == 'Windows':
+            self.font = kwargs.pop('font', ['Arial', 'Gulim']) # 외부망
+            plt.rcParams['font.family'] = self.font # 외부망
+        elif platform.system() == 'Linux':
+            self.font = kwargs.pop('font', ['NanumGothicCoding']) # 내부망
+            plt.rcParams['font.family'] = self.font # 내부망
+            mpl.rcParams.update(mpl.rcParamsDefault) ### 내부망, 임의수정
+            
         ###############################
-        
+        mpl.rcParams['axes.unicode_minus'] = False ### 내부망, 임의수정
         # Set title if provided
         #self.title = kwargs.get('title', None)
         #self.title_fontsize = kwargs.get('title_fontsize', 16)
