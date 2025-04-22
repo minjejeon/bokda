@@ -56,14 +56,14 @@ classifiers = [
 dependencies = [
     # 파이썬 버전별 numpy, pandas 의존성 설정
     "numpy==1.26.4 ; python_version < '3.10'",        
-    "numpy>=2.1,<2.2 ; python_version >= '3.10'", # NumPy 2.x 버전 사용 (NumPy 2.x 헤더 사용), numpy>=2.1,<2.2, numpy>=1.26,<2.0.2
+    "numpy>=2.0.2,<2.1 ; python_version >= '3.10'", # NumPy 2.x 버전 사용 (NumPy 2.x 헤더 사용), numpy>=2.1,<2.2, numpy>=1.26,<2.0.2
     "pandas==1.5.3 ; python_version < '3.10'",
     "pandas>=2.0 ; python_version >= '3.10'",     # 기존 pandas>=2.0
 
     # 기타 라이브러리 의존성 설정
     "scipy>=1.13,<1.15",       # 2차 setup.py 기준, 기존 scipy>=1.14,<1.15
     "statsmodels>=0.14,<0.15",
-    "matplotlib>=3.8.2",
+    "matplotlib>=3.8.2, <3.9.4",
     "seaborn>=0.13.0",        
     "linearmodels==6.1",      # linearmodels>=6.0
     "openpyxl",               
