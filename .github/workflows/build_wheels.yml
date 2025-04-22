@@ -39,7 +39,7 @@ jobs:
         env:
           # --- 빌드할 환경 지정 (매우 중요) ---
           # 예: CPython 3.9와 3.11 버전용 휠만 빌드
-          CIBW_BUILD: "cp39-* cp311-*"
+          CIBW_BUILD: "cp39-* cp311-* cp312-*"
           # 예: 특정 환경 빌드 건너뛰기 (예: musllinux, 32비트 윈도우)
           CIBW_SKIP: "*-musllinux* *win32*"
           # 필요한 다른 CIBW_* 환경 변수 설정 (예: 아키텍처)
