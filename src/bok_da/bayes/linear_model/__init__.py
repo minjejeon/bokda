@@ -1,1 +1,1 @@
-from .bayes_lm import gen_hyper_para, Bayes_result_table, gibbs_lin, gibbs_vs, Bayes_histogram, Bayes_scatter, get_table, plot_hist, BayesLinearRegression, BayesVariableSelection
+from .bayes_lm import gen_hyper_para, Bayes_result_table, bayes_linear, bayes_linear_vs, Bayes_histogram, Bayes_scatter, get_table, plot_hist, BayesLinearRegression, BayesVariableSelection

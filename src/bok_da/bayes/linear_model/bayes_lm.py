@@ -22,7 +22,7 @@ class BayesLinearRegression:
         #    xt1 = oos.iloc[:, 1:]
         #    self.results = gibbs_lin(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, verbose=verbose, quantile=quantile)
         #else:
-        self.results = gibbs_lin(Y=y, X=x, hyper=self.hyper, print_info=print_info, quantile=quantile)
+        self.results = bayes_linear(Y=y, X=x, hyper=self.hyper, print_info=print_info, quantile=quantile)
             
         return self.results
     
@@ -32,7 +32,7 @@ class BayesLinearRegression:
         
         yt1 = oos.iloc[:, 0]
         xt1 = oos.iloc[:, 1:]
-        self.results = gibbs_lin(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, print_info=print_info, quantile=quantile)
+        self.results = bayes_linear(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, print_info=print_info, quantile=quantile)
             
         return self.results
     
@@ -49,7 +49,7 @@ class BayesVariableSelection:
         #    xt1 = oos.iloc[:, 1:]
         #    self.results = gibbs_vs(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, verbose=verbose, quantile=quantile)
         #else:
-        self.results = gibbs_vs(Y=y, X=x, hyper=self.hyper, print_info=print_info, quantile=quantile)
+        self.results = bayes_linear_vs(Y=y, X=x, hyper=self.hyper, print_info=print_info, quantile=quantile)
             
         return self.results
     
@@ -59,7 +59,7 @@ class BayesVariableSelection:
         
         yt1 = oos.iloc[:, 0]
         xt1 = oos.iloc[:, 1:]
-        self.results = gibbs_vs(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, print_info=print_info, quantile=quantile)
+        self.results = bayes_linear_vs(Y=y, X=x, XT1=xt1, YT1=yt1, hyper=self.hyper, print_info=print_info, quantile=quantile)
             
         return self.results
 
@@ -566,7 +566,7 @@ def Bayes_R2(Y: np.ndarray,
 
     return R2
 
-def gibbs_vs(Y: Union[pd.Series, pd.DataFrame], 
+def bayes_linear_vs(Y: Union[pd.Series, pd.DataFrame], 
              X: Union[pd.Series, pd.DataFrame], 
              hyper: dict=gen_hyper_para("VS"), 
              XT1: Union[pd.Series, pd.DataFrame]=None, 
@@ -716,13 +716,13 @@ def gibbs_vs(Y: Union[pd.Series, pd.DataFrame],
         return BayesLinResult(beta=Betam, sig2=Sig2m, gam=Gamm, p=Pm, r2=R2m)
             
             
-def gibbs_lin(Y: Union[pd.Series, pd.DataFrame], 
-              X: Union[pd.Series, pd.DataFrame], 
-              hyper: dict=gen_hyper_para(), 
-              XT1: Union[pd.Series, pd.DataFrame]=None, 
-              YT1: Union[pd.Series, pd.DataFrame]=None, 
-              print_info: bool=False, 
-              quantile: list=[0.05, 0.95]) -> BayesLinResult:
+def bayes_linear(Y: Union[pd.Series, pd.DataFrame], 
+                 X: Union[pd.Series, pd.DataFrame], 
+                 hyper: dict=gen_hyper_para(), 
+                 XT1: Union[pd.Series, pd.DataFrame]=None, 
+                 YT1: Union[pd.Series, pd.DataFrame]=None, 
+                 print_info: bool=False, 
+                 quantile: list=[0.05, 0.95]) -> BayesLinResult:
     """Bayesian Linear Regression
 
     Args:
