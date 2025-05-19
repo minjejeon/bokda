@@ -109,10 +109,6 @@ Repository = "https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git"
 [tool.setuptools]
 zip-safe = false # C 확장 모듈 포함으로 인한 zip-safe=False 설정
 include-package-data = true
-data-files = [
-    ["examples/notebooks", "examples/notebooks/*"],
-    ["examples/data",      "examples/data/*],
-]
 
 [tool.setuptools.packages.find]
 where = ["src"]       # 소스 코드는 'src' 디렉토리 아래에 위치
@@ -125,3 +121,11 @@ include = ["bok_da*"] # 'bok_da' 로 시작하는 모든 패키지 포함
 #    "examples/notebooks/*.pdf",
 #    "examples/data/*,
 #]
+
+# 루트 examples 폴더를 site-packages/examples 로 설치
+[tool.setuptools.data-files]
+"examples/notebooks" = ["examples/notebooks/*"]
+"examples/data"      = ["examples/data/*"]
+
+[project.entry-points."console_scripts"]
+bokda-copy-examples = "bok_da.scripts:copy_examples"
