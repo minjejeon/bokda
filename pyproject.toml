@@ -108,11 +108,20 @@ Repository = "https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git"
 # =============================================
 [tool.setuptools]
 zip-safe = false # C 확장 모듈 포함으로 인한 zip-safe=False 설정
+include-package-data = true
+data-files = [
+    ["examples/notebooks", "examples/notebooks/*"],
+    ["examples/data",      "examples/data/*],
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]       # 소스 코드는 'src' 디렉토리 아래에 위치
 include = ["bok_da*"] # 'bok_da' 로 시작하는 모든 패키지 포함
 
-## --- (참고) 패키지 내 데이터 파일 포함 ---
-## [tool.setuptools.package-data]
-## bok_da = ["data_files/*.csv"]
+## 패키지 내 예제코드, 데이터 파일 포함 ---
+#[tool.setuptools.package-data]
+#"bok_da" = [
+#    "examples/notebooks/*.ipynb",
+#    "examples/notebooks/*.pdf",
+#    "examples/data/*,
+#]
