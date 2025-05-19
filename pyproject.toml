@@ -124,11 +124,9 @@ include = ["bok_da*"] # 'bok_da' 로 시작하는 모든 패키지 포함
 
 # 루트 examples 폴더를 site-packages/examples 로 설치
 [tool.setuptools.data-files]
-#"examples/notebooks" = ["examples/notebooks/*"]
-#"examples/data"      = ["examples/data/*"]
-"examples" = ["examples/**/*]
-"manual" = ["manual/**/*"]
-"." = ["Dev Guide.md"]
+"examples/notebooks" = ["examples/notebooks/*"]
+"examples/data"      = ["examples/data/*"]
+"manual"             = ["manual/*"]
 
 [project.entry-points."console_scripts"]
 bokda-import-example_manual = "bok_da.scripts:import_example_manual"

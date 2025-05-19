@@ -5,44 +5,43 @@ from pathlib import Path
 
 def import_example_manual():
     """
-    site-packages 안에 설치된 examples/, manual/ 폴더와 Dev Guide.md 파일을
+    site-packages 안에 설치된 examples/notebooks, examples/data, manual 폴더를
     현재 작업 디렉터리로 복사
     """
-    # 1) sys.path에서 설치된 site-packages 경로 찾기
+    # 1) sys.path에서 site-packages 경로 찾기
     pkg_root = None
     for p in sys.path:
         cand = Path(p)
-        if (cand / "examples").is_dir() or (cand / "manual").is_dir() or (cand / "Dev Guide.md").is_file():
+        # examples/notebooks 또는 examples/data 또는 manual 폴더가 있는지 확인
+        if (cand / "examples" / "notebooks").is_dir() \
+        or (cand / "examples" / "data").is_dir() \
+        or (cand / "manual").is_dir():
             pkg_root = cand
             break
 
     if pkg_root is None:
-        print("[bok-da] 설치된 site-packages에 examples/manual/Dev Guide.md가 없습니다.")
+        print("[bok-da] 설치된 site-packages에 examples/notebooks, examples/data, manual 폴더가 없습니다.")
         sys.exit(1)
 
-    # 복사 목록 정의
+    # 복사 목록 정의 (패키지 내부 경로, 작업 디렉터리 경로)
     items = [
-        ("examples", "examples"),
-        ("manual", "manual"),
-        ("Dev Guide.md", "Dev Guide.md"),
+        ("examples/notebooks", "examples/notebooks"),
+        ("examples/data",      "examples/data"),
+        ("manual",             "manual"),
     ]
 
-    for src_name, tgt_name in items:
-        src = pkg_root / src_name
-        tgt = Path.cwd() / tgt_name
+    for src_rel, tgt_rel in items:
+        src = pkg_root / src_rel
+        tgt = Path.cwd() / tgt_rel
 
         if not src.exists():
-            # 없으면 건너뜀
+            # 존재하지 않으면 건너뜀
             continue
 
         if tgt.exists():
             print(f"[bok-da] '{tgt}' 이미 존재합니다. 삭제 후 다시 시도하세요.")
             continue
 
-        # 디렉터리 vs 파일 분기
-        if src.is_dir():
-            shutil.copytree(src, tgt)
-            print(f"[bok-da] '{src_name}' 폴더를 '{tgt}'에 복사했습니다.")
-        else:
-            shutil.copy2(src, tgt)
-            print(f"[bok-da] '{src_name}' 파일을 '{tgt}'에 복사했습니다.")
+        # 디렉터리 복사
+        shutil.copytree(src, tgt)
+        print(f"[bok-da] '{src_rel}' 폴더를 '{tgt_rel}'에 복사했습니다.")
