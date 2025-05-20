@@ -18,7 +18,7 @@
 - 일부 모델(상태공간모형, UCSV)에서 경우 cython을 통한 빠른 코드 실행을 지원
 - `manual` 디렉토리에 모델별 사용 방*법을 담은 매뉴얼을 마크다운 형태로 정리
 - `examples` 디렉토리에 주피터 노트북 기반의 예제 코드와 데이터를 포함
-- Python 3.9, 3.12 기반의 환경을 지원
+- Python `3.9`, `3.10`, `3.11`, `3.12` 기반의 환경을 지원
 
 
 ## 라이브러리 구조(디렉토리 구성)
@@ -47,58 +47,57 @@
 
 - `Dev Guide.md`: 라이브러리 도구 개발 가이드 문서
 
-- `pyproject.toml`, `setup.py`, `MANIFEXT.in`: bok-da 패키지 빌드를 위한 파일
+- `pyproject.toml`, `setup.py`, `MANIFEXT.in`: bok-da 패키지 빌드를 위한 파일  
 
-# BIDAS 환경에서 라이브러리 설치
+<br>
 
-## 1. BIDAS Modelhub -> 고성능 데이터 분석환경 -> Jupyterlab(Python) 실행
+# BIDAS 환경에서 bok-da 라이브러리 설치 및 사용
+
+> bok-da 라이브러리를 BIDAS 환경에서 설치하고 사용하는 방법에는 I. `배포판` 설치와 II. `gitlab repository`를 `clone`해 `수정가능모드`로 설치하는 방법 두가지가 있습니다. 기능 확장을 위해 소스코드 수정이 필요한 경우에는 수정가능모드로 설치하는 것을 권장합니다.
+
+## I. 배포판 설치
+
+### 1. BIDAS Modelhub -> 고성능 데이터 분석환경 -> Jupyterlab(Python) 클릭
 
 ![image](img/bidas_modelhub.PNG)
 
-## 2. Jupyterlab에서 File -> New Launcher -> Terminal 실행
+### 2. Jupyterlab에서 File -> New Launcher -> Terminal 실행
 
 ![image](img/terminal.PNG)
 
-## 3. GitLab에서 라이브러리 리파지토리(repository) 불러오기
-Terminal에서 아래 코드 순서대로 실행
+### 3. bok-da 설치 및 예제코드, 매뉴얼 불러오기
+**(bok-da 설치)** Terminal에서 아래 명령어 실행
+```bash
+pip install bok-da
+```
+**(예제코드 및 매뉴얼 불러오기)** Terminal에서 아래 명령어 실행
+```bash
+bokda-import-example_manual
+```
+`examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
+
+## II. Gitlab repository를 clone해 수정가능모드로 설치
+
+### 1. GitLab repository를 내 작업 디렉토리에 복제
+Jupyterlab terminal에서 아래 명령어 순서대로 실행
 ```bash
 cd 행번 (예시: cd 2310490)
 git config --global http.sslVerify false
-git clone --depth 1 https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git
+git clone https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git
 ```
-![image](img/git_clone.PNG)
+[//]: #![image](img/git_clone.PNG)
 
-## 4. 설치
-Terminal에서 아래 코드 순서대로 실행
+## 2. 수정가능모드 설치
+Jupyterlab terminal에서 아래 명령어 순서대로 실행
 ```bash
-cd bok_library/bok_da/dist
-pip install bok-da-0.3.0.tar.gz
+cd bok_library
+pip install -e .
 ```
-![image](img/bok_installation.PNG)
+`examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
 
-# 라이브러리 사용
-## 1. bok-da 라이브러리 불러오기
-Jupyterlab에서 bok_library 폴더에 새 노트북 파일(.ipynb)을 생성하고, 아래 코드 실행
-```python
-import bok_da as bd
-```
-## 2. 매뉴얼 활용
-```bash
-bok_library 폴더에서 매뉴얼 노트북 파일 참조
-```
-![image](img/bok_manual.PNG)
+[//]: #![image](img/bok_installation.PNG)
 
-## 3. gitlab에서 복제해서 만든 자신의 작업폴더를 새로운 gitlab project로 생성
-```bash
-git remote remove origin
-git remote add origin https://행번:내부망윈도우패스워드@bidas-gitlab.boknet.intra/행번/프로젝트이름.git
-git add .
-git commit -m "initial commit"
-git push origin main
-```
-
-# (**수정해야함**) 개인PC(로컬) 환경에서 라이브러리 사용
-내부망 `S드라이브` PC/999. 한국은행 데이터 분석 라이브러리(bok-da) 폴더에 `bok-da 라이브러리 개인PC(로컬) 환경 사용 방법(내부망).txt` 또는 `동파일명(외부망).txt` 참조
+<br>
 
 # 개인PC(로컬) 환경에서 bok-da 라이브러리 설치(외부망)
 
@@ -112,7 +111,9 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
 
 1. Anaconda 배포판 다운로드 사이트에서 운영체제에 맞는 설치 파일 다운로드  
    - https://www.anaconda.com/download  
+
 2. 설치가 완료되면, **Anaconda Prompt** 실행  
+
 3. Anaconda Prompt에서 가상환경 생성  
    ```bash
    conda create -n <환경이름> python=<버전>
@@ -159,6 +160,8 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
    pip install bok_da-0.3.1-cp312-cp312-win_amd64.whl
    ```
 
+<br>
+
 # 개인PC(로컬) 환경에서 bok-da 라이브러리 설치(내부망)
 
 > 내부망 개인 PC 환경(Anaconda 배포판 파이썬을 사용하는 JupyterLab 환경)에서 bok-da 라이브러리를 설치하는 방법을 설명하는 매뉴얼입니다.
@@ -193,6 +196,8 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
    pip install bok_da-0.3.1-cp311-cp311-win_amd64.whl
    ```
 
+<br>
+
 # bok-da 라이브러리 사용
 
 1. jupyter lab에서 새 Python 노트북 파일(.ipynb 확장자) 열기
@@ -201,6 +206,8 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
     ```python
     import bok_da as bd
     ```
+
+<br>
 
 # 활용 예제코드 및 매뉴얼 불러오기
 
@@ -213,11 +220,15 @@ bokda-copy-examples_manual
 `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
 `manual` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음
 
+<br>
+
 # 라이브러리 개발 기여
 - 디지털혁신실 데이터사이언스팀
 - 고려대학교 경제학과 한치록, 강규호 교수 연구진
 - 서강대학교 경제학과 허준영, 김재호 교수 연구진
 - 연세대학교 응용통계학부 진익훈 교수 연구진
+
+<br>
 
 # 라이브러리 관련 문의
 디지털혁신실 데이터사이언스팀 이창훈 과장(4638)
