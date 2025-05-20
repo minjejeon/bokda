@@ -19,9 +19,9 @@ def import_example_manual():
             pkg_root = cand
             break
         
-    if pkg_root is None:
-        print("[bok-da] 설치된 site-packages에 examples/notebooks, examples/data, manual 폴더가 없습니다.")
-        sys.exit(1)
+    #if pkg_root is None:
+    #    print("[bok-da] 설치된 site-packages에 examples/notebooks, examples/data, manual 폴더가 없습니다.")
+    #    sys.exit(1)
     
     #####    
     # 2) 개발환경(Editable 모드) 경로 지정: 패키지 루트의 두 단계 상위 폴더
