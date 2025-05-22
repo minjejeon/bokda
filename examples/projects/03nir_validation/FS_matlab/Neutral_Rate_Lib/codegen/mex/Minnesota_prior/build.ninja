@@ -1,0 +1,62 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2021a
+startdir = D:/Dropbox/Policy_Works/NL_LBVAR_2023/Codes/Model_Lib
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Minnesota_prior" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Minnesota_prior\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Minnesota_prior" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Minnesota_prior\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+ldflags =  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "Minnesota_prior_mex.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $ldflags
+
+# Build
+build $builddir/Minnesota_prior_data.o : cxx $root/Minnesota_prior_data.cpp
+build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
+build $builddir/Minnesota_prior_initialize.o : cxx $root/Minnesota_prior_initialize.cpp
+build $builddir/Minnesota_prior_terminate.o : cxx $root/Minnesota_prior_terminate.cpp
+build $builddir/Minnesota_prior.o : cxx $root/Minnesota_prior.cpp
+build $builddir/mean.o : cxx $root/mean.cpp
+build $builddir/eml_int_forloop_overflow_check.o : cxx $root/eml_int_forloop_overflow_check.cpp
+build $builddir/sumMatrixIncludeNaN.o : cxx $root/sumMatrixIncludeNaN.cpp
+build $builddir/eye.o : cxx $root/eye.cpp
+build $builddir/assertValidSizeArg.o : cxx $root/assertValidSizeArg.cpp
+build $builddir/eml_mtimes_helper.o : cxx $root/eml_mtimes_helper.cpp
+build $builddir/mtimes.o : cxx $root/mtimes.cpp
+build $builddir/inv.o : cxx $root/inv.cpp
+build $builddir/norm.o : cxx $root/norm.cpp
+build $builddir/warning.o : cxx $root/warning.cpp
+build $builddir/diag.o : cxx $root/diag.cpp
+build $builddir/_coder_Minnesota_prior_api.o : cxx $root/interface/_coder_Minnesota_prior_api.cpp
+build $builddir/_coder_Minnesota_prior_mex.o : cxx $root/interface/_coder_Minnesota_prior_mex.cpp
+build $builddir/sqrt.o : cxx $root/sqrt.cpp
+build $builddir/_coder_Minnesota_prior_info.o : cxx $root/interface/_coder_Minnesota_prior_info.cpp
+build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+
+# Link
+build $root\Minnesota_prior_mex.mexw64 : linkxx $builddir/Minnesota_prior_data.o $builddir/rt_nonfinite.o $builddir/Minnesota_prior_initialize.o $builddir/Minnesota_prior_terminate.o $builddir/Minnesota_prior.o $builddir/mean.o $builddir/eml_int_forloop_overflow_check.o $builddir/sumMatrixIncludeNaN.o $builddir/eye.o $builddir/assertValidSizeArg.o $builddir/eml_mtimes_helper.o $builddir/mtimes.o $builddir/inv.o $builddir/norm.o $builddir/warning.o $builddir/diag.o $builddir/_coder_Minnesota_prior_api.o $builddir/_coder_Minnesota_prior_mex.o $builddir/sqrt.o $builddir/_coder_Minnesota_prior_info.o $builddir/cpp_mexapi_version.o 

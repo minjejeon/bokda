@@ -1,0 +1,128 @@
+[
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Minnesota_prior_data.cpp -o build/win64/Minnesota_prior_data.o",
+    "file": "Minnesota_prior_data.cpp",
+    "output": "build/win64/Minnesota_prior_data.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   rt_nonfinite.cpp -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Minnesota_prior_initialize.cpp -o build/win64/Minnesota_prior_initialize.o",
+    "file": "Minnesota_prior_initialize.cpp",
+    "output": "build/win64/Minnesota_prior_initialize.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Minnesota_prior_terminate.cpp -o build/win64/Minnesota_prior_terminate.o",
+    "file": "Minnesota_prior_terminate.cpp",
+    "output": "build/win64/Minnesota_prior_terminate.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Minnesota_prior.cpp -o build/win64/Minnesota_prior.o",
+    "file": "Minnesota_prior.cpp",
+    "output": "build/win64/Minnesota_prior.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   mean.cpp -o build/win64/mean.o",
+    "file": "mean.cpp",
+    "output": "build/win64/mean.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eml_int_forloop_overflow_check.cpp -o build/win64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/win64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   sumMatrixIncludeNaN.cpp -o build/win64/sumMatrixIncludeNaN.o",
+    "file": "sumMatrixIncludeNaN.cpp",
+    "output": "build/win64/sumMatrixIncludeNaN.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eye.cpp -o build/win64/eye.o",
+    "file": "eye.cpp",
+    "output": "build/win64/eye.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   assertValidSizeArg.cpp -o build/win64/assertValidSizeArg.o",
+    "file": "assertValidSizeArg.cpp",
+    "output": "build/win64/assertValidSizeArg.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eml_mtimes_helper.cpp -o build/win64/eml_mtimes_helper.o",
+    "file": "eml_mtimes_helper.cpp",
+    "output": "build/win64/eml_mtimes_helper.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   mtimes.cpp -o build/win64/mtimes.o",
+    "file": "mtimes.cpp",
+    "output": "build/win64/mtimes.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   inv.cpp -o build/win64/inv.o",
+    "file": "inv.cpp",
+    "output": "build/win64/inv.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   norm.cpp -o build/win64/norm.o",
+    "file": "norm.cpp",
+    "output": "build/win64/norm.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   warning.cpp -o build/win64/warning.o",
+    "file": "warning.cpp",
+    "output": "build/win64/warning.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   diag.cpp -o build/win64/diag.o",
+    "file": "diag.cpp",
+    "output": "build/win64/diag.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Minnesota_prior_api.cpp -o build/win64/_coder_Minnesota_prior_api.o",
+    "file": "interface/_coder_Minnesota_prior_api.cpp",
+    "output": "build/win64/_coder_Minnesota_prior_api.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Minnesota_prior_mex.cpp -o build/win64/_coder_Minnesota_prior_mex.o",
+    "file": "interface/_coder_Minnesota_prior_mex.cpp",
+    "output": "build/win64/_coder_Minnesota_prior_mex.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   sqrt.cpp -o build/win64/sqrt.o",
+    "file": "sqrt.cpp",
+    "output": "build/win64/sqrt.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Minnesota_prior_info.cpp -o build/win64/_coder_Minnesota_prior_info.o",
+    "file": "interface/_coder_Minnesota_prior_info.cpp",
+    "output": "build/win64/_coder_Minnesota_prior_info.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Minnesota_prior\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Minnesota_prior_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   \"C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp\" -o build/win64/cpp_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.o"
+  }
+]

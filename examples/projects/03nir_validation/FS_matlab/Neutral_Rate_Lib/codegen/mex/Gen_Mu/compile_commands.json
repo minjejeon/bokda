@@ -1,0 +1,152 @@
+[
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Mu_data.cpp -o build/win64/Gen_Mu_data.o",
+    "file": "Gen_Mu_data.cpp",
+    "output": "build/win64/Gen_Mu_data.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   rt_nonfinite.cpp -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Mu_initialize.cpp -o build/win64/Gen_Mu_initialize.o",
+    "file": "Gen_Mu_initialize.cpp",
+    "output": "build/win64/Gen_Mu_initialize.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Mu_terminate.cpp -o build/win64/Gen_Mu_terminate.o",
+    "file": "Gen_Mu_terminate.cpp",
+    "output": "build/win64/Gen_Mu_terminate.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eye.cpp -o build/win64/eye.o",
+    "file": "eye.cpp",
+    "output": "build/win64/eye.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eml_int_forloop_overflow_check.cpp -o build/win64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/win64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   diag.cpp -o build/win64/diag.o",
+    "file": "diag.cpp",
+    "output": "build/win64/diag.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eml_mtimes_helper.cpp -o build/win64/eml_mtimes_helper.o",
+    "file": "eml_mtimes_helper.cpp",
+    "output": "build/win64/eml_mtimes_helper.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   mtimes.cpp -o build/win64/mtimes.o",
+    "file": "mtimes.cpp",
+    "output": "build/win64/mtimes.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   inv.cpp -o build/win64/inv.o",
+    "file": "inv.cpp",
+    "output": "build/win64/inv.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   norm.cpp -o build/win64/norm.o",
+    "file": "norm.cpp",
+    "output": "build/win64/norm.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   warning.cpp -o build/win64/warning.o",
+    "file": "warning.cpp",
+    "output": "build/win64/warning.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   randn.cpp -o build/win64/randn.o",
+    "file": "randn.cpp",
+    "output": "build/win64/randn.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   indexShapeCheck.cpp -o build/win64/indexShapeCheck.o",
+    "file": "indexShapeCheck.cpp",
+    "output": "build/win64/indexShapeCheck.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   cholmod.cpp -o build/win64/cholmod.o",
+    "file": "cholmod.cpp",
+    "output": "build/win64/cholmod.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   abs.cpp -o build/win64/abs.o",
+    "file": "abs.cpp",
+    "output": "build/win64/abs.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   sum.cpp -o build/win64/sum.o",
+    "file": "sum.cpp",
+    "output": "build/win64/sum.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   sumMatrixIncludeNaN.cpp -o build/win64/sumMatrixIncludeNaN.o",
+    "file": "sumMatrixIncludeNaN.cpp",
+    "output": "build/win64/sumMatrixIncludeNaN.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   error.cpp -o build/win64/error.o",
+    "file": "error.cpp",
+    "output": "build/win64/error.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Mu_api.cpp -o build/win64/_coder_Gen_Mu_api.o",
+    "file": "interface/_coder_Gen_Mu_api.cpp",
+    "output": "build/win64/_coder_Gen_Mu_api.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Mu_mex.cpp -o build/win64/_coder_Gen_Mu_mex.o",
+    "file": "interface/_coder_Gen_Mu_mex.cpp",
+    "output": "build/win64/_coder_Gen_Mu_mex.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Mu.cpp -o build/win64/Gen_Mu.o",
+    "file": "Gen_Mu.cpp",
+    "output": "build/win64/Gen_Mu.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   chol.cpp -o build/win64/chol.o",
+    "file": "chol.cpp",
+    "output": "build/win64/chol.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Mu_info.cpp -o build/win64/_coder_Gen_Mu_info.o",
+    "file": "interface/_coder_Gen_Mu_info.cpp",
+    "output": "build/win64/_coder_Gen_Mu_info.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\KOR_US_NIR\\Codes2\\Neutral_Rate_Lib\\codegen\\mex\\Gen_Mu\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_Mu_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   \"C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp\" -o build/win64/cpp_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.o"
+  }
+]

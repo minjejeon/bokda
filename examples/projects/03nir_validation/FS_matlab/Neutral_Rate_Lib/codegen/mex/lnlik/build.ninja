@@ -1,0 +1,63 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2021a
+startdir = D:/Dropbox/Policy_Works/NL_LBVAR_2023/Codes/Model_Lib
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\lnlik" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\lnlik\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DMODEL=lnlik_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\lnlik" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\lnlik\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DMODEL=lnlik_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+ldflags =  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "lnlik_mex.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibemlrt -llibcovrt -llibut -llibmwmathutil 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $ldflags
+
+# Build
+build $builddir/lnlik_data.o : cxx $root/lnlik_data.cpp
+build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
+build $builddir/lnlik_initialize.o : cxx $root/lnlik_initialize.cpp
+build $builddir/lnlik_terminate.o : cxx $root/lnlik_terminate.cpp
+build $builddir/lnlik.o : cxx $root/lnlik.cpp
+build $builddir/lnlik_NonLinear.o : cxx $root/lnlik_NonLinear.cpp
+build $builddir/eye.o : cxx $root/eye.cpp
+build $builddir/eml_int_forloop_overflow_check.o : cxx $root/eml_int_forloop_overflow_check.cpp
+build $builddir/diag.o : cxx $root/diag.cpp
+build $builddir/eml_mtimes_helper.o : cxx $root/eml_mtimes_helper.cpp
+build $builddir/mtimes.o : cxx $root/mtimes.cpp
+build $builddir/invpd.o : cxx $root/invpd.cpp
+build $builddir/cholmod.o : cxx $root/cholmod.cpp
+build $builddir/abs.o : cxx $root/abs.cpp
+build $builddir/sum.o : cxx $root/sum.cpp
+build $builddir/sumMatrixIncludeNaN.o : cxx $root/sumMatrixIncludeNaN.cpp
+build $builddir/error.o : cxx $root/error.cpp
+build $builddir/lnpdfmvn1.o : cxx $root/lnpdfmvn1.cpp
+build $builddir/_coder_lnlik_api.o : cxx $root/interface/_coder_lnlik_api.cpp
+build $builddir/_coder_lnlik_mex.o : cxx $root/interface/_coder_lnlik_mex.cpp
+build $builddir/_coder_lnlik_info.o : cxx $root/interface/_coder_lnlik_info.cpp
+build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+
+# Link
+build $root\lnlik_mex.mexw64 : linkxx $builddir/lnlik_data.o $builddir/rt_nonfinite.o $builddir/lnlik_initialize.o $builddir/lnlik_terminate.o $builddir/lnlik.o $builddir/lnlik_NonLinear.o $builddir/eye.o $builddir/eml_int_forloop_overflow_check.o $builddir/diag.o $builddir/eml_mtimes_helper.o $builddir/mtimes.o $builddir/invpd.o $builddir/cholmod.o $builddir/abs.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/error.o $builddir/lnpdfmvn1.o $builddir/_coder_lnlik_api.o $builddir/_coder_lnlik_mex.o $builddir/_coder_lnlik_info.o $builddir/cpp_mexapi_version.o 

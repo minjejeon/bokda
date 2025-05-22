@@ -1,19 +1,17 @@
-# pyproject.toml(Py 3.9 + NumPy 2.0.2) 기준
+# pyproject.toml for bok-da
 
 # =============================================
 # 빌드 시스템 설정 (PEP 518)
 # =============================================
 [build-system]
-# 빌드에 필요한 패키지 목록 (Cython과 NumPy 포함, NumPy 2.x 헤더 사용)
+# 빌드에 필요한 패키지 목록
 requires = [
     "setuptools>=61",
     "wheel",
-    "cython>=0.29", # Cython 버전은 필요시 조정
-    "numpy>=1.26",   # NumPy 2.x 헤더 사용 (NumPy 2.x 버전 사용), 기존 numpy>=2.1, 2.0
+    "cython>=3.0.9", 
+    "numpy>=1.26", # 기존 numpy>=2.1, 2.0
 ]
 build-backend = "setuptools.build_meta"
-#backend-path = ["."] # setup.py(ext_modules 정의용)를 사용하기 위해, 일단 불필요
-
 
 # =============================================
 # 프로젝트 메타데이터 (PEP 621)
@@ -30,8 +28,9 @@ maintainers = [
 ]
 description = "BOK Python Library for Generalized Data Analysis"
 readme = "README.md"
-requires-python = ">=3.9"      # ★ 목표 환경 반영, 외부망에선 >=3.11도 호환
-license = { file="LICENSE.txt" }    # LICENSE 파일이 루트에 있다고 가정
+requires-python = ">=3.9"      # ★ 목표 환경 반영, >=3.11도 호환
+license = "Apache-2.0"         # { file="LICENSE.txt" }    # LICENSE 파일이 루트에 있다고 가정
+license-files = ["LICENSE.txt"] 
 keywords = ["bok", "data analysis", "econometrics", "time series", "Bayesian"]
 classifiers = [                 
     "Development Status :: 4 - Beta",
@@ -40,7 +39,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "License :: OSI Approved :: BSD 3-Clauses License", # 라이선스는 추후 확인 필요
+    #"License :: OSI Approved :: Apache Software License", # 라이선스는 추후 확인
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
@@ -55,15 +54,15 @@ classifiers = [
 # =============================================
 dependencies = [
     # 파이썬 버전별 numpy, pandas 의존성 설정
-    "numpy==1.26.4 ; python_version < '3.10'",        
-    "numpy>=2.0.2,<2.1 ; python_version >= '3.10'", # NumPy 2.x 버전 사용 (NumPy 2.x 헤더 사용), numpy>=2.1,<2.2, numpy>=1.26,<2.0.2
-    "pandas==1.5.3 ; python_version < '3.10'",
-    "pandas>=2.0 ; python_version >= '3.10'",     # 기존 pandas>=2.0
+    "numpy==1.26.4; python_version<'3.10'",        
+    "numpy>=2.0.2,<2.1; python_version>='3.10'", # numpy>=2.1,<2.2, numpy>=1.26,<2.0.2
+    "pandas==1.5.3; python_version<'3.10'",
+    "pandas>=2.0; python_version>='3.10'",     # 기존 pandas>=2.0
 
     # 기타 라이브러리 의존성 설정
     "scipy>=1.13,<1.15",       # 2차 setup.py 기준, 기존 scipy>=1.14,<1.15
     "statsmodels>=0.14,<0.15",
-    "matplotlib>=3.8.2, <3.9.4",
+    "matplotlib>=3.8.2,<3.9.4",
     "seaborn>=0.13.0",        
     "linearmodels==6.1",      # linearmodels>=6.0
     "openpyxl",               
@@ -72,9 +71,11 @@ dependencies = [
     #"wrapt>=1.14",
     #"mypy_extensions>=1.0",
     "requests>=2.28,<3.0",        # 2차 setup.py 기준
-    # "s3fs>=2023.12.2",        # 내부망용
-    # "cython"은 빌드 의존성이므로 여기서 제외
-    # 'wrapt', 'mypy_extensions'는 다른 패키지의 하위 의존성이므로 직접 명시 불필요
+    "papermill>=2.4,<2.6.1",
+    "ipywidgets>=7.7.1,<8.1.6",
+    "scikit-learn>=1.5.0,<1.6.2",
+    "s3fs>=2023.12.2,<2025.3.2",
+    "jinja2>=2.11.2,<3.1.4",
 ]
 
 # =============================================

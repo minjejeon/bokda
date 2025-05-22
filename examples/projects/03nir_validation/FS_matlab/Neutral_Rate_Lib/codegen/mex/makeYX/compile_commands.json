@@ -1,0 +1,62 @@
+[
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   makeYX_data.cpp -o build/win64/makeYX_data.o",
+    "file": "makeYX_data.cpp",
+    "output": "build/win64/makeYX_data.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   rt_nonfinite.cpp -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   makeYX_initialize.cpp -o build/win64/makeYX_initialize.o",
+    "file": "makeYX_initialize.cpp",
+    "output": "build/win64/makeYX_initialize.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   makeYX_terminate.cpp -o build/win64/makeYX_terminate.o",
+    "file": "makeYX_terminate.cpp",
+    "output": "build/win64/makeYX_terminate.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   makeYX.cpp -o build/win64/makeYX.o",
+    "file": "makeYX.cpp",
+    "output": "build/win64/makeYX.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   eml_int_forloop_overflow_check.cpp -o build/win64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/win64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_makeYX_api.cpp -o build/win64/_coder_makeYX_api.o",
+    "file": "interface/_coder_makeYX_api.cpp",
+    "output": "build/win64/_coder_makeYX_api.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_makeYX_mex.cpp -o build/win64/_coder_makeYX_mex.o",
+    "file": "interface/_coder_makeYX_mex.cpp",
+    "output": "build/win64/_coder_makeYX_mex.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_makeYX_info.cpp -o build/win64/_coder_makeYX_info.o",
+    "file": "interface/_coder_makeYX_info.cpp",
+    "output": "build/win64/_coder_makeYX_info.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\makeYX\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=makeYX_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   \"C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp\" -o build/win64/cpp_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.o"
+  }
+]

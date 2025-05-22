@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Gamma_data.cpp -o build/win64/Gen_Gamma_data.o",
+    "file": "Gen_Gamma_data.cpp",
+    "output": "build/win64/Gen_Gamma_data.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   rt_nonfinite.cpp -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Gamma_initialize.cpp -o build/win64/Gen_Gamma_initialize.o",
+    "file": "Gen_Gamma_initialize.cpp",
+    "output": "build/win64/Gen_Gamma_initialize.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Gamma_terminate.cpp -o build/win64/Gen_Gamma_terminate.o",
+    "file": "Gen_Gamma_terminate.cpp",
+    "output": "build/win64/Gen_Gamma_terminate.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   Gen_Gamma.cpp -o build/win64/Gen_Gamma.o",
+    "file": "Gen_Gamma.cpp",
+    "output": "build/win64/Gen_Gamma.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   rand.cpp -o build/win64/rand.o",
+    "file": "rand.cpp",
+    "output": "build/win64/rand.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Gamma_api.cpp -o build/win64/_coder_Gen_Gamma_api.o",
+    "file": "interface/_coder_Gen_Gamma_api.cpp",
+    "output": "build/win64/_coder_Gen_Gamma_api.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Gamma_mex.cpp -o build/win64/_coder_Gen_Gamma_mex.o",
+    "file": "interface/_coder_Gen_Gamma_mex.cpp",
+    "output": "build/win64/_coder_Gen_Gamma_mex.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   gammaln.cpp -o build/win64/gammaln.o",
+    "file": "gammaln.cpp",
+    "output": "build/win64/gammaln.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   interface/_coder_Gen_Gamma_info.cpp -o build/win64/_coder_Gen_Gamma_info.o",
+    "file": "interface/_coder_Gen_Gamma_info.cpp",
+    "output": "build/win64/_coder_Gen_Gamma_info.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\g++ -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\" -I \"D:\\Dropbox\\Policy_Works\\NL_LBVAR_2023\\Codes\\Model_Lib\\codegen\\mex\\Gen_Gamma\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H   \"C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp\" -o build/win64/cpp_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2021a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.o"
+  }
+]

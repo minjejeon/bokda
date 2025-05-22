@@ -1,0 +1,67 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2021a
+startdir = D:/Dropbox/Policy_Works/Neutral_Interest_Rate/Codes/Neutral_Rate_Lib
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib\codegen\mex\Gen_C" -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib" -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib\codegen\mex\Gen_C\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1  
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib\codegen\mex\Gen_C" -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib" -I "D:\Dropbox\Policy_Works\Neutral_Interest_Rate\Codes\Neutral_Rate_Lib\codegen\mex\Gen_C\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1  
+
+ldflags =  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "Gen_C_mex.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil  -Wl,--version-script,Gen_C_mex.map
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $ldflags
+
+# Build
+build $builddir/Gen_C_data.o : cc $root/Gen_C_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/Gen_C_initialize.o : cc $root/Gen_C_initialize.c
+build $builddir/Gen_C_terminate.o : cc $root/Gen_C_terminate.c
+build $builddir/Gen_C.o : cc $root/Gen_C.c
+build $builddir/assertValidSizeArg.o : cc $root/assertValidSizeArg.c
+build $builddir/randn.o : cc $root/randn.c
+build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
+build $builddir/lnpdfn.o : cc $root/lnpdfn.c
+build $builddir/sum.o : cc $root/sum.c
+build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
+build $builddir/eml_mtimes_helper.o : cc $root/eml_mtimes_helper.c
+build $builddir/mtimes.o : cc $root/mtimes.c
+build $builddir/det.o : cc $root/det.c
+build $builddir/repmat.o : cc $root/repmat.c
+build $builddir/mrdivide_helper.o : cc $root/mrdivide_helper.c
+build $builddir/warning.o : cc $root/warning.c
+build $builddir/qrsolve.o : cc $root/qrsolve.c
+build $builddir/rand.o : cc $root/rand.c
+build $builddir/_coder_Gen_C_api.o : cc $root/interface/_coder_Gen_C_api.c
+build $builddir/_coder_Gen_C_mex.o : cc $root/interface/_coder_Gen_C_mex.c
+build $builddir/vec.o : cc $root/vec.c
+build $builddir/Gen_C_emxutil.o : cc $root/Gen_C_emxutil.c
+build $builddir/Gen_C_mexutil.o : cc $root/Gen_C_mexutil.c
+build $builddir/_coder_Gen_C_info.o : cc $root/interface/_coder_Gen_C_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root\Gen_C_mex.mexw64 : link $builddir/Gen_C_data.o $builddir/rt_nonfinite.o $builddir/Gen_C_initialize.o $builddir/Gen_C_terminate.o $builddir/Gen_C.o $builddir/assertValidSizeArg.o $builddir/randn.o $builddir/eml_int_forloop_overflow_check.o $builddir/lnpdfn.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/eml_mtimes_helper.o $builddir/mtimes.o $builddir/det.o $builddir/repmat.o $builddir/mrdivide_helper.o $builddir/warning.o $builddir/qrsolve.o $builddir/rand.o $builddir/_coder_Gen_C_api.o $builddir/_coder_Gen_C_mex.o $builddir/vec.o $builddir/Gen_C_emxutil.o $builddir/Gen_C_mexutil.o $builddir/_coder_Gen_C_info.o $builddir/c_mexapi_version.o 

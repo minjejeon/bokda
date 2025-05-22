@@ -1,0 +1,52 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2021a
+startdir = D:/Dropbox/Policy_Works/NL_LBVAR_2023/Codes/Model_Lib
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2021a\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Gen_Gamma" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Gen_Gamma\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -std=c++11 -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Gen_Gamma" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib" -I "D:\Dropbox\Policy_Works\NL_LBVAR_2023\Codes\Model_Lib\codegen\mex\Gen_Gamma\interface" -I "C:\Program Files\MATLAB\R2021a\extern\include" -I "." -DMODEL=Gen_Gamma_mex -D__USE_MINGW_ANSI_STDIO=1 -DMW_NEEDS_VERSION_H  
+
+ldflags =  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2021a\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "Gen_Gamma_mex.mexw64" -llibemlrt -llibcovrt -llibut -llibmwmathutil 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $ldflags
+
+# Build
+build $builddir/Gen_Gamma_data.o : cxx $root/Gen_Gamma_data.cpp
+build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
+build $builddir/Gen_Gamma_initialize.o : cxx $root/Gen_Gamma_initialize.cpp
+build $builddir/Gen_Gamma_terminate.o : cxx $root/Gen_Gamma_terminate.cpp
+build $builddir/Gen_Gamma.o : cxx $root/Gen_Gamma.cpp
+build $builddir/rand.o : cxx $root/rand.cpp
+build $builddir/_coder_Gen_Gamma_api.o : cxx $root/interface/_coder_Gen_Gamma_api.cpp
+build $builddir/_coder_Gen_Gamma_mex.o : cxx $root/interface/_coder_Gen_Gamma_mex.cpp
+build $builddir/gammaln.o : cxx $root/gammaln.cpp
+build $builddir/_coder_Gen_Gamma_info.o : cxx $root/interface/_coder_Gen_Gamma_info.cpp
+build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+
+# Link
+build $root\Gen_Gamma_mex.mexw64 : linkxx $builddir/Gen_Gamma_data.o $builddir/rt_nonfinite.o $builddir/Gen_Gamma_initialize.o $builddir/Gen_Gamma_terminate.o $builddir/Gen_Gamma.o $builddir/rand.o $builddir/_coder_Gen_Gamma_api.o $builddir/_coder_Gen_Gamma_mex.o $builddir/gammaln.o $builddir/_coder_Gen_Gamma_info.o $builddir/cpp_mexapi_version.o 

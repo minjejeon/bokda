@@ -34,7 +34,7 @@ from . import viz
 from . import stata
 
 ## model validation
-from . import validation
+from . import valid
 
 ## patches
 from . import patch

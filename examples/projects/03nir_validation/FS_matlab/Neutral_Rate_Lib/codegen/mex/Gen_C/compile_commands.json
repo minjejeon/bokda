@@ -1,0 +1,158 @@
+[
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C_data.c -o build/win64/Gen_C_data.o",
+    "file": "Gen_C_data.c",
+    "output": "build/win64/Gen_C_data.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   rt_nonfinite.c -o build/win64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C_initialize.c -o build/win64/Gen_C_initialize.o",
+    "file": "Gen_C_initialize.c",
+    "output": "build/win64/Gen_C_initialize.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C_terminate.c -o build/win64/Gen_C_terminate.o",
+    "file": "Gen_C_terminate.c",
+    "output": "build/win64/Gen_C_terminate.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C.c -o build/win64/Gen_C.o",
+    "file": "Gen_C.c",
+    "output": "build/win64/Gen_C.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   assertValidSizeArg.c -o build/win64/assertValidSizeArg.o",
+    "file": "assertValidSizeArg.c",
+    "output": "build/win64/assertValidSizeArg.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   randn.c -o build/win64/randn.o",
+    "file": "randn.c",
+    "output": "build/win64/randn.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   eml_int_forloop_overflow_check.c -o build/win64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.c",
+    "output": "build/win64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   lnpdfn.c -o build/win64/lnpdfn.o",
+    "file": "lnpdfn.c",
+    "output": "build/win64/lnpdfn.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   sum.c -o build/win64/sum.o",
+    "file": "sum.c",
+    "output": "build/win64/sum.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   sumMatrixIncludeNaN.c -o build/win64/sumMatrixIncludeNaN.o",
+    "file": "sumMatrixIncludeNaN.c",
+    "output": "build/win64/sumMatrixIncludeNaN.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   eml_mtimes_helper.c -o build/win64/eml_mtimes_helper.o",
+    "file": "eml_mtimes_helper.c",
+    "output": "build/win64/eml_mtimes_helper.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   mtimes.c -o build/win64/mtimes.o",
+    "file": "mtimes.c",
+    "output": "build/win64/mtimes.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   det.c -o build/win64/det.o",
+    "file": "det.c",
+    "output": "build/win64/det.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   repmat.c -o build/win64/repmat.o",
+    "file": "repmat.c",
+    "output": "build/win64/repmat.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   mrdivide_helper.c -o build/win64/mrdivide_helper.o",
+    "file": "mrdivide_helper.c",
+    "output": "build/win64/mrdivide_helper.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   warning.c -o build/win64/warning.o",
+    "file": "warning.c",
+    "output": "build/win64/warning.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   qrsolve.c -o build/win64/qrsolve.o",
+    "file": "qrsolve.c",
+    "output": "build/win64/qrsolve.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   rand.c -o build/win64/rand.o",
+    "file": "rand.c",
+    "output": "build/win64/rand.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   interface/_coder_Gen_C_api.c -o build/win64/_coder_Gen_C_api.o",
+    "file": "interface/_coder_Gen_C_api.c",
+    "output": "build/win64/_coder_Gen_C_api.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   interface/_coder_Gen_C_mex.c -o build/win64/_coder_Gen_C_mex.o",
+    "file": "interface/_coder_Gen_C_mex.c",
+    "output": "build/win64/_coder_Gen_C_mex.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   vec.c -o build/win64/vec.o",
+    "file": "vec.c",
+    "output": "build/win64/vec.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C_emxutil.c -o build/win64/Gen_C_emxutil.o",
+    "file": "Gen_C_emxutil.c",
+    "output": "build/win64/Gen_C_emxutil.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   Gen_C_mexutil.c -o build/win64/Gen_C_mexutil.o",
+    "file": "Gen_C_mexutil.c",
+    "output": "build/win64/Gen_C_mexutil.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   interface/_coder_Gen_C_info.c -o build/win64/_coder_Gen_C_info.o",
+    "file": "interface/_coder_Gen_C_info.c",
+    "output": "build/win64/_coder_Gen_C_info.o"
+  },
+  {
+    "directory": "D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C",
+    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2021a\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\" -I \"D:\\Dropbox\\Policy_Works\\Neutral_Interest_Rate\\Codes\\Neutral_Rate_Lib\\codegen\\mex\\Gen_C\\interface\" -I \"C:\\Program Files\\MATLAB\\R2021a\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=Gen_C_mex -D__USE_MINGW_ANSI_STDIO=1   \"C:/Program Files/MATLAB/R2021a/extern/version/c_mexapi_version.c\" -o build/win64/c_mexapi_version.o",
+    "file": "C:/Program Files/MATLAB/R2021a/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.o"
+  }
+]
