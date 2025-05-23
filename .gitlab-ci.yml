@@ -16,9 +16,19 @@ build_wheels_linux:
     # cibuildwheel 환경 변수
     CIBW_BUILD: "cp39-* cp311-* cp312-*"
     CIBW_SKIP: "*-musllinux*"
-  script:
+
+  before_script:
+    # 1) 패키지 인덱스 업데이트
+    - apt-get update -qq
+
+    # 2) docker CLI 설치 (Debian 기반)
+    - apt-get install -qq -y docker.io
+
+    # 3) pip 업그레이드 & 빌드 도구 설치
     - pip install --upgrade pip
-    - pip install cibuildwheel==2.* build wheel setuptools
+    - pip install cibuildwheel build wheel setuptools
+
+  script:
     - cibuildwheel --output-dir wheelhouse
   artifacts:
     paths:
