@@ -65,6 +65,7 @@ dependencies = [
     "matplotlib>=3.8.2,<3.9.4",
     "seaborn>=0.13.0",        
     "linearmodels==6.1",      # linearmodels>=6.0
+    "dwtest==0.0.4",
     "openpyxl",               
     "tqdm",                   
     "threadpoolctl>=3.5,<3.6", # 2차 setup.py 기준

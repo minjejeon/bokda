@@ -642,7 +642,7 @@ class Workspace:
         '''Evaluate forecasts'''
         #import bok.forecast as fcast
         import bok_da
-        from bok_da.validation.pred_perf import col_evaluation_metrics
+        from bok_da.valid.pred_perf import col_evaluation_metrics
         verbose = kwargs.pop('verbose', self.verbose)
         beautiful = kwargs.pop('beautiful', self.beautiful)
         #ans = fcast.eval_forecasts(target, *args, **kwargs)
@@ -656,7 +656,7 @@ class Workspace:
     def diebold_mariano(self, target, *args, **kwargs):
         '''Diebold-Mariano test'''
         import bok_da
-        from bok_da.validation.pred_perf import diebold_mariano
+        from bok_da.valid.pred_perf import diebold_mariano
         verbose = kwargs.pop('verbose', self.verbose)
         beautiful = kwargs.pop('beautiful', self.beautiful)
         ans = diebold_mariano(target, *args, **kwargs)
@@ -672,7 +672,7 @@ class Workspace:
     def clark_west(self, target, *args, **kwargs):
         '''Clark-West test'''
         import bok_da
-        from bok_da.validation.pred_perf import clark_west
+        from bok_da.valid.pred_perf import clark_west
         verbose = kwargs.pop('verbose', self.verbose)
         beautiful = kwargs.pop('beautiful', self.beautiful)
         ans = clark_west(target, *args, **kwargs)

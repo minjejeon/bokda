@@ -412,7 +412,6 @@ def Kalman_Smoother_UC(F, Beta_ttm, P_ttm, Beta_tLm, P_tLm):
 
     return Beta_tTm, P_tTm
 
-        
 def uc(Y: Union[pd.Series, pd.DataFrame], 
        lag: int = 1, 
        lamb: int = 1, 

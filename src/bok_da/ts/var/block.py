@@ -16,7 +16,7 @@ class BlockVarResult:
         self.lag = lag
         self.k = phi_hat.shape[1]
         
-        self.phi_hat = [phi_hat[i*self.k:(i+1)*self.k, :] for i in range(self.lag)]
+        #self.phi_hat = [phi_hat[i*self.k:(i+1)*self.k, :] for i in range(self.lag)]
         
         for key, value in kwargs.items():
             setattr(self, key, value)
