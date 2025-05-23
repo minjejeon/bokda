@@ -2,11 +2,11 @@
 
 stages:
   - build
-  
+
 # 1. Linux 에서 cibuildwheel 로 빌드
 build_wheels_linux:
   stage: build
-  image: docker:latest
+  image: python:3.12
   services:
     - name: docker:dind
       alias: docker
