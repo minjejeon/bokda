@@ -459,8 +459,13 @@ class Plotter:
             plt.text(xi, yi+vadj, str(yi), ha=ha, va=va, *args, **kwargs)
 
     def annotate(self, text, at='both', **kwargs):
-        #from matplotlib import rcParams
-        #rcParams['font.family'] = 'NanumGothicCoding'
+        import platform
+        from matplotlib import rcParams
+        if platform.system() == 'Windows':
+            rcParams['font.family'] = 'Malgun Gothic'
+        elif platform.system() == 'Linux':
+            rcParams['font.family'] = 'NanumGothicCoding'
+
         self.prepare_right_axis(self.axes[1] is None)
         if isinstance(text,str):
             text = [text, text]
