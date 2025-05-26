@@ -38,17 +38,16 @@ build_wheels_windows:
   tags:
     - windows
 
-  variables:
-    PYTHONHTTPSVERIFY: "0"
-
   before_script:
-    # 기존 python → Windows 런처 py -3 로 변경
-    - py -3 -m pip install --upgrade pip
-    - py -3 -m pip install cibuildwheel build wheel setuptools
+    # 1) 이 PowerShell 세션에서 SSL 인증서 검증 끄기
+    - pwsh -NoProfile -Command '$Env:PYTHONHTTPSVERIFY = "0"'
+    # 2) pip 업그레이드 & 빌드 도구 설치
+    - pwsh -NoProfile -Command 'py -3 -m pip install --upgrade pip'
+    - pwsh -NoProfile -Command 'py -3 -m pip install cibuildwheel build wheel setuptools'
 
   script:
-    # cibuildwheel 호출도 py -3 런처로
-    - py -3 -m cibuildwheel --platform windows --output-dir wheelhouse
+    # 3) 빌드 실행 (SSL 검증 OFF 상태에서)
+    - pwsh -NoProfile -Command 'py -3 -m cibuildwheel --platform windows --output-dir wheelhouse'
 
   artifacts:
     paths:
