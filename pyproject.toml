@@ -29,8 +29,8 @@ maintainers = [
 description = "BOK Python Library for Generalized Data Analysis"
 readme = "README.md"
 requires-python = ">=3.9"      # ★ 목표 환경 반영, >=3.11도 호환
-license = "Apache-2.0"         # { file="LICENSE.txt" }    # LICENSE 파일이 루트에 있다고 가정
-license-files = ["LICENSE.txt"] 
+license = { file="LICENSE.txt" } #"Apache-2.0"         # { file="LICENSE.txt" }    # LICENSE 파일이 루트에 있다고 가정
+#license-files = ["LICENSE.txt"] 
 keywords = ["bok", "data analysis", "econometrics", "time series", "Bayesian"]
 classifiers = [                 
     "Development Status :: 4 - Beta",

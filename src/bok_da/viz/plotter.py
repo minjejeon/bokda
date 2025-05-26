@@ -101,16 +101,16 @@ class Plotter:
         
         
         #### 내외부망 이부분 수정 필요 ####
-        #if platform.system() == 'Windows':
-        #    self.font = kwargs.pop('font', ['Arial', 'Gulim']) # 외부망
-        #    plt.rcParams['font.family'] = self.font # 외부망
-        #elif platform.system() == 'Linux':
-        #    self.font = kwargs.pop('font', ['NanumGothicCoding']) # 내부망
-        #    plt.rcParams['font.family'] = self.font # 내부망
-        #    mpl.rcParams.update(mpl.rcParamsDefault) ### 내부망, 임의수정
+        if platform.system() == 'Windows':
+            self.font = kwargs.pop('font', ['Arial', 'Gulim']) # 외부망
+            plt.rcParams['font.family'] = self.font # 외부망
+        elif platform.system() == 'Linux':
+            self.font = kwargs.pop('font', ['NanumGothicCoding']) # 내부망
+            plt.rcParams['font.family'] = self.font # 내부망
+            mpl.rcParams.update(mpl.rcParamsDefault) ### 내부망, 임의수정
             
         ###############################
-        #mpl.rcParams['axes.unicode_minus'] = False ### 내부망, 임의수정
+        mpl.rcParams['axes.unicode_minus'] = False ### 내부망, 임의수정
         
         # Set title if provided
         #self.title = kwargs.get('title', None)
@@ -573,144 +573,136 @@ class Plotter:
         if copy_ylim: self.axes[1].set_ylim(self.axes[0].get_ylim())
         self.axes[0].set_facecolor("none")
 
-    # def legend(self, small=False, **kwargs):
-    #     prop = {'family': kwargs.pop('family',self.font)}
-            
-    #     if 'ncol' in kwargs:
-    #         ncol = kwargs['ncol']
-    #     else:
-    #         kwargs['ncol'] = min(self.legend_ncol, len(self.handles))
-    #         ncol = kwargs['ncol']
-
-    #     kwargs.setdefault('loc', 'best') # default: 'upper center'
-    #     kwargs.setdefault('frameon', False)
-    #     #loc = kwargs.get('loc')
-    #     #kwargs.setdefault(
-    #     #    'bbox_to_anchor',
-    #     #    (0.5,1.2) if "upper" in loc else (1.1,0.5)
-    #     #)
-
-    #     #if ncol > 1 and \
-    #     #   ("upper" in loc or "lower" in loc) and \
-    #     #   len(self.handles) > ncol:
-    #     if ncol > 1 and len(self.handles) > ncol:
-    #         reOrder = lambda l, nc: sum((l[i::nc] for i in range(nc)), [])
-    #         labels = [h.get_label() for h in self.handles]
-    #         lgd = plt.legend(
-    #             reOrder(self.handles, ncol),
-    #             reOrder(labels, ncol),
-    #             prop=prop, **kwargs
-    #         )
-    #     else:
-    #         lgd = plt.legend(handles=self.handles, prop=prop, **kwargs)
-    #     #plt.subplots_adjust(top=.85)
-
-    #     if small:
-    #         for handle in lgd.legendHandles:
-    #             s = handle.__class__.__name__
-    #             if s == 'Rectangle':
-    #                 handle.set_width(10)
-    #             elif s == 'Line2D':
-    #                 handle.set_linewidth(1.)
-                    
     def legend(self, small=False, **kwargs):
+        prop = {'family': kwargs.pop('family', self.font)}
 
-        # --- 범례를 추가할 축 객체 지정 ---
-        ax = self.axes[0] # 기본적으로 첫 번째 축 사용
-
-        # --- 축에서 직접 핸들과 라벨 가져오기 ---
-        handles, labels = ax.get_legend_handles_labels()
-
-        # 범례에 표시할 내용이 없으면 종료
-        if not handles:
-            # print("No handles with labels found. Legend not created.") # 필요시 주석 해제
-            return None
-
-        # --- 폰트 속성 처리 ---
-        # kwargs에서 fontproperties, prop, family 순서로 확인하고 적용
-        legend_font_props = kwargs.pop('fontproperties', None)
-        if legend_font_props is None:
-            prop_kwarg = kwargs.pop('prop', None) # prop 키워드도 받을 수 있게
-            if isinstance(prop_kwarg, FontProperties):
-                legend_font_props = prop_kwarg # FontProperties 객체면 사용
-            elif prop_kwarg is not None:
-                warnings.warn("'prop' keyword argument for legend font should be a FontProperties object. Ignoring.", UserWarning)
-
-        if 'family' in kwargs: # 비표준 'family' 키워드 처리
-            family_kwarg = kwargs.pop('family') # kwargs에서 제거
-            if legend_font_props is None: # 다른 폰트 설정이 없을 때만 적용
-                 try:
-                     legend_font_props = FontProperties(family=family_kwarg)
-                 except Exception as e:
-                     warnings.warn(f"Could not create FontProperties for family='{family_kwarg}': {e}. Using default rcParams font.", UserWarning)
-            else: # 이미 다른 폰트 설정이 있으면 family는 무시
-                 warnings.warn("Ignoring 'family' kwarg because 'prop' or 'fontproperties' was also provided.", UserWarning)
-        # legend_font_props가 None이면 최종 legend 호출 시 rcParams 전역 설정 사용됨
-        # --- 폰트 처리 끝 ---
-
-
-        # --- ncol 및 기타 옵션 처리 (기존 로직 유지, self.handles 대신 handles 사용) ---
         if 'ncol' in kwargs:
             ncol = kwargs['ncol']
         else:
-            # self.legend_ncol 속성이 없다면 기본값 1 사용
-            default_ncol = getattr(self, 'legend_ncol', 1)
-            kwargs['ncol'] = min(default_ncol, len(handles)) # self.handles 대신 handles 사용
+            kwargs['ncol'] = min(self.legend_ncol, len(self.handles))
             ncol = kwargs['ncol']
-        ncol = max(1, int(ncol)) # 최소 1 보장
-        kwargs['ncol'] = ncol # 최종 ncol 값 kwargs에 반영
 
         kwargs.setdefault('loc', 'best')
         kwargs.setdefault('frameon', False)
-        # --- 기타 옵션 처리 끝 ---
 
-
-        # --- 핸들/라벨 순서 재정렬 (기존 로직 유지, self.handles 대신 handles/labels 사용) ---
-        if ncol > 1 and len(handles) > ncol: # self.handles 대신 handles 사용
-            try:
-                reOrder = lambda l, nc: sum((l[i::nc] for i in range(nc)), [])
-                final_handles = reOrder(handles, ncol) # self.handles 대신 handles 사용
-                final_labels = reOrder(labels, ncol)   # 직접 얻은 labels 사용
-            except Exception as e:
-                warnings.warn(f"Could not reorder legend items: {e}. Using original order.", UserWarning)
-                final_handles = handles
-                final_labels = labels
+        if ncol > 1 and len(self.handles) > ncol:
+            reOrder = lambda l, nc: sum((l[i::nc] for i in range(nc)), [])
+            labels = [h.get_label() for h in self.handles]
+            lgd = plt.legend(
+                reOrder(self.handles, ncol),
+                reOrder(labels, ncol),
+                prop=prop, **kwargs
+            )
         else:
-            final_handles = handles
-            final_labels = labels
-        # --- 재정렬 끝 ---
+            lgd = plt.legend(handles=self.handles, prop=prop, **kwargs)
 
-
-        # --- 범례 생성 (ax.legend 호출 한 번으로!) ---
-        # plt.legend() 호출 및 중복 ax.legend() 호출 제거
-        lgd = None
-        try:
-            # fontproperties 인자로 처리된 폰트 속성 전달
-            lgd = ax.legend(handles=final_handles, labels=final_labels, prop=legend_font_props, **kwargs)
-        except Exception as e:
-            warnings.warn(f"Failed to create legend: {e}", UserWarning)
-            return None
-        # --- 범례 생성 끝 ---
-
-
-        # --- 'small' 옵션 처리 (기존 로직 유지) ---
-        if small and lgd:
-             try:
-                 # matplotlib 버전에 따라 legendHandles 또는 legend_handles 시도
-                 handles_to_adjust = getattr(lgd, 'legendHandles', getattr(lgd, 'legend_handles', []))
-                 for handle in handles_to_adjust:
-                     s = handle.__class__.__name__
-                     if s == 'Rectangle':
-                         try: handle.set_width(10)
-                         except: pass
-                     elif s == 'Line2D':
-                         try: handle.set_linewidth(1.)
-                         except: pass
-             except Exception as e:
-                 warnings.warn(f"Could not resize legend handles: {e}", UserWarning)
-        # --- 'small' 옵션 처리 끝 ---
-
-        return lgd # 최종 생성된 범례 객체 반환
+        if small:
+            for handle in lgd.legendHandles:
+                s = handle.__class__.__name__
+                if s == 'Rectangle':
+                    handle.set_width(10)
+                elif s == 'Line2D':
+                    handle.set_linewidth(1.)
+        return lgd
+                    
+    # def legend(self, small=False, **kwargs):
+    #
+    #     # --- 범례를 추가할 축 객체 지정 ---
+    #     ax = self.axes[0] # 기본적으로 첫 번째 축 사용
+    #
+    #     # --- 축에서 직접 핸들과 라벨 가져오기 ---
+    #     handles, labels = ax.get_legend_handles_labels()
+    #
+    #     # 범례에 표시할 내용이 없으면 종료
+    #     if not handles:
+    #         # print("No handles with labels found. Legend not created.") # 필요시 주석 해제
+    #         return None
+    #
+    #     # --- 폰트 속성 처리 ---
+    #     # kwargs에서 fontproperties, prop, family 순서로 확인하고 적용
+    #     legend_font_props = kwargs.pop('fontproperties', None)
+    #     if legend_font_props is None:
+    #         prop_kwarg = kwargs.pop('prop', None) # prop 키워드도 받을 수 있게
+    #         if isinstance(prop_kwarg, FontProperties):
+    #             legend_font_props = prop_kwarg # FontProperties 객체면 사용
+    #         elif prop_kwarg is not None:
+    #             warnings.warn("'prop' keyword argument for legend font should be a FontProperties object. Ignoring.", UserWarning)
+    #
+    #     if 'family' in kwargs: # 비표준 'family' 키워드 처리
+    #         family_kwarg = kwargs.pop('family') # kwargs에서 제거
+    #         if legend_font_props is None: # 다른 폰트 설정이 없을 때만 적용
+    #              try:
+    #                  legend_font_props = FontProperties(family=family_kwarg)
+    #              except Exception as e:
+    #                  warnings.warn(f"Could not create FontProperties for family='{family_kwarg}': {e}. Using default rcParams font.", UserWarning)
+    #         else: # 이미 다른 폰트 설정이 있으면 family는 무시
+    #              warnings.warn("Ignoring 'family' kwarg because 'prop' or 'fontproperties' was also provided.", UserWarning)
+    #     # legend_font_props가 None이면 최종 legend 호출 시 rcParams 전역 설정 사용됨
+    #     # --- 폰트 처리 끝 ---
+    #
+    #
+    #     # --- ncol 및 기타 옵션 처리 (기존 로직 유지, self.handles 대신 handles 사용) ---
+    #     if 'ncol' in kwargs:
+    #         ncol = kwargs['ncol']
+    #     else:
+    #         # self.legend_ncol 속성이 없다면 기본값 1 사용
+    #         default_ncol = getattr(self, 'legend_ncol', 1)
+    #         kwargs['ncol'] = min(default_ncol, len(handles)) # self.handles 대신 handles 사용
+    #         ncol = kwargs['ncol']
+    #     ncol = max(1, int(ncol)) # 최소 1 보장
+    #     kwargs['ncol'] = ncol # 최종 ncol 값 kwargs에 반영
+    #
+    #     kwargs.setdefault('loc', 'best')
+    #     kwargs.setdefault('frameon', False)
+    #     # --- 기타 옵션 처리 끝 ---
+    #
+    #
+    #     # --- 핸들/라벨 순서 재정렬 (기존 로직 유지, self.handles 대신 handles/labels 사용) ---
+    #     if ncol > 1 and len(handles) > ncol: # self.handles 대신 handles 사용
+    #         try:
+    #             reOrder = lambda l, nc: sum((l[i::nc] for i in range(nc)), [])
+    #             final_handles = reOrder(handles, ncol) # self.handles 대신 handles 사용
+    #             final_labels = reOrder(labels, ncol)   # 직접 얻은 labels 사용
+    #         except Exception as e:
+    #             warnings.warn(f"Could not reorder legend items: {e}. Using original order.", UserWarning)
+    #             final_handles = handles
+    #             final_labels = labels
+    #     else:
+    #         final_handles = handles
+    #         final_labels = labels
+    #     # --- 재정렬 끝 ---
+    #
+    #
+    #     # --- 범례 생성 (ax.legend 호출 한 번으로!) ---
+    #     # plt.legend() 호출 및 중복 ax.legend() 호출 제거
+    #     lgd = None
+    #     try:
+    #         # fontproperties 인자로 처리된 폰트 속성 전달
+    #         lgd = ax.legend(handles=final_handles, labels=final_labels, prop=legend_font_props, **kwargs)
+    #     except Exception as e:
+    #         warnings.warn(f"Failed to create legend: {e}", UserWarning)
+    #         return None
+    #     # --- 범례 생성 끝 ---
+    #
+    #
+    #     # --- 'small' 옵션 처리 (기존 로직 유지) ---
+    #     if small and lgd:
+    #          try:
+    #              # matplotlib 버전에 따라 legendHandles 또는 legend_handles 시도
+    #              handles_to_adjust = getattr(lgd, 'legendHandles', getattr(lgd, 'legend_handles', []))
+    #              for handle in handles_to_adjust:
+    #                  s = handle.__class__.__name__
+    #                  if s == 'Rectangle':
+    #                      try: handle.set_width(10)
+    #                      except: pass
+    #                  elif s == 'Line2D':
+    #                      try: handle.set_linewidth(1.)
+    #                      except: pass
+    #          except Exception as e:
+    #              warnings.warn(f"Could not resize legend handles: {e}", UserWarning)
+    #     # --- 'small' 옵션 처리 끝 ---
+    #
+    #     return lgd # 최종 생성된 범례 객체 반환
 
     def to_front(self, axis=0):
         if axis==0:
