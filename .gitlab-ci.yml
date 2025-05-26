@@ -2,7 +2,7 @@
 
 stages:
   - build
-  
+
 # 1. Linux 에서 cibuildwheel 로 빌드
 build_wheels_linux:
   stage: build
