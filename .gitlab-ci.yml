@@ -9,23 +9,27 @@ build_wheels_linux:
   image: python:3.12
   tags:
     - linux
-  services:
-    - name: docker:dind
-      alias: docker
   variables:
-    DOCKER_HOST: tcp://docker:2375/
+    # Docker Desktop 윈도우 호스트 데몬에 연결
+    DOCKER_HOST: "tcp://host.docker.internal:2375"
     DOCKER_DRIVER: overlay2
     CIBW_BUILD: "cp39-* cp311-* cp312-*"
     CIBW_ARCHS_LINUX: "x86_64"
+    CIBW_SKIP: "*-musllinux*"
+
   before_script:
+    # 도커 CLI 설치 (컨테이너 내)
     - apt-get update -qq && apt-get install -qq -y docker.io
     - pip install --upgrade pip
     - pip install cibuildwheel build wheel setuptools
+
   script:
     - cibuildwheel --output-dir wheelhouse
+
   artifacts:
     paths:
       - wheelhouse/*.whl
+    expire_in: 1 week
 
 # 2. Windows 런너(태그가 'windows' 로 지정된 Runner)에서 빌드
 build_wheels_windows:
@@ -34,10 +38,14 @@ build_wheels_windows:
   tags:
     - windows
   before_script:
-    - python -m pip install --upgrade pip
-    - pip install cibuildwheel build wheel setuptools
+    # 기존 python → Windows 런처 py -3 로 변경
+    - py -3 -m pip install --upgrade pip
+    - py -3 -m pip install cibuildwheel build wheel setuptools
+
   script:
-    - cibuildwheel --platform windows --output-dir wheelhouse
+    # cibuildwheel 호출도 py -3 런처로
+    - py -3 -m cibuildwheel --platform windows --output-dir wheelhouse
+
   artifacts:
     paths:
       - wheelhouse/*.whl
