@@ -18,7 +18,7 @@ jobs:
       matrix:
         # 빌드를 수행할 OS 목록 (필요한 환경만 선택 가능)
         # 예: ubuntu-latest (Linux), windows-latest, macos-latest
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest] # macos-latest 추가 가능
 
     steps:
       # 1. 저장소 코드 가져오기
@@ -41,7 +41,7 @@ jobs:
           # 예: CPython 3.9와 3.11 버전용 휠만 빌드
           CIBW_BUILD: "cp39-* cp311-* cp312-*"
           # 예: 특정 환경 빌드 건너뛰기 (예: musllinux, 32비트 윈도우)
-          CIBW_SKIP: "*-musllinux* *win32*"
+          CIBW_SKIP: "*-musllinux* *win32* *i686*"
           # 필요한 다른 CIBW_* 환경 변수 설정 (예: 아키텍처)
           # CIBW_ARCHS_LINUX: auto aarch64
 
