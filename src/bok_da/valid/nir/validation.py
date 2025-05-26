@@ -69,7 +69,7 @@ class ModelPaths:
 # LM 모형 R 코드 실행 함수
 def run_LM(end_date: str, 
            paths: ModelPaths
-           ) -> pd.DataFrame | None:
+           ):
     
     """
     LM 모형 R 코드 실행 함수
@@ -131,7 +131,7 @@ def run_LM(end_date: str,
 # FS 모형 Matlab 코드 실행 함수
 def run_FS(end_date: str, 
            paths: ModelPaths,
-           )-> pd.DataFrame | None:
+           ):
     """
     FS 모형 Matlab 코드 실행 함수
 
