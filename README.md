@@ -78,7 +78,7 @@ bokda-import-example_manual
 ```
 `examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
 
-## II. Gitlab repository를 clone해 수정가능모드로 설치
+## II. Gitlab repository를 clone해 editable mode(개발모드)로 설치
 
 ### 1. GitLab repository를 내 작업 디렉토리에 복제
 Jupyterlab terminal에서 아래 명령어 순서대로 실행
@@ -93,6 +93,7 @@ git clone https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git
 Jupyterlab terminal에서 아래 명령어 순서대로 실행
 ```bash
 cd bok_library
+pip install cython-3.1.1-py3-none-any.whl
 pip install -e .
 ```
 `examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
