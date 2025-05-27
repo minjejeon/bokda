@@ -37,12 +37,12 @@ from pathlib import Path
 from dataclasses import dataclass
 
 # 한글 폰트 설정
-warnings.filterwarnings(action='ignore')
-try:
-    plt.rc('font', family='Malgun Gothic')
-except Exception:
-    plt.rc('font', family='NanumGothicCoding')
-plt.rcParams['axes.unicode_minus'] = False
+#warnings.filterwarnings(action='ignore')
+#try:
+#    plt.rc('font', family='Malgun Gothic')
+#except Exception:
+#    plt.rc('font', family='NanumGothicCoding')
+#plt.rcParams['axes.unicode_minus'] = False
 
 
 # Spec 클래스
