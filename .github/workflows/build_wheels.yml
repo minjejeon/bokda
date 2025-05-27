@@ -47,9 +47,8 @@ jobs:
 
           #cython
           #####################################
-          PIP_NO_INDEX: "true"
-          PIP_FIND_LINKS: "${{ github.workspace }}/wheels"
-          CIBW_BEFORE_ALL: "pip install Cython==3.1.1"
+          CIBW_BEFORE_ALL: |
+            pip install --no-index --find-links="${{ github.workspace }}/wheels" Cython==3.1.1
           #####################################
 
       # 4. 빌드된 휠 파일들을 아티팩트로 업로드 (★★ 핵심 ★★)
