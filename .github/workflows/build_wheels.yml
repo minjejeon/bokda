@@ -45,12 +45,6 @@ jobs:
           # 필요한 다른 CIBW_* 환경 변수 설정 (예: 아키텍처)
           # CIBW_ARCHS_LINUX: auto aarch64
 
-          #cython
-          #####################################
-          CIBW_BEFORE_ALL: |
-            pip install --no-index --find-links="${{ github.workspace }}/wheels" Cython==3.1.1
-          #####################################
-
       # 4. 빌드된 휠 파일들을 아티팩트로 업로드 (★★ 핵심 ★★)
       #    이 단계를 통해 빌드 결과물을 다운로드할 수 있게 됩니다.
       - name: Upload wheels artifact
