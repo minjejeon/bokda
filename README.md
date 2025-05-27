@@ -89,7 +89,7 @@ git clone https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git
 ```
 [//]: #![image](img/git_clone.PNG)
 
-## 2. 수정가능모드 설치
+## 2. editable mode 설치
 Jupyterlab terminal에서 아래 명령어 순서대로 실행
 ```bash
 cd bok_library
