@@ -106,7 +106,7 @@ pip install -e .
 
 # 예제코드 및 매뉴얼 활용
 
-bok-da 리포지터리의 `docs`와 `examples` 폴더를 참고하거나, 해당 폴더의 압축파일을 다운로드한 후, 작업 디렉토리에 해제하여 활용<a href="https://bidas-s3.boknet.intra/newtech/public/bok_lib/bok-da-docs-examples-v0.3.1.7z" download>[예제파일 다운로드]</a> :nose:
+bok-da 리포지터리의 `docs`와 `examples` 폴더를 참고하거나, 해당 폴더의 압축파일을 다운로드한 후, 작업 디렉토리에 해제하여 활용<a href="https://bidas-s3.boknet.intra/newtech/public/bok_lib/bok-da-docs-examples-v0.3.1.7z" download>[:notebook: 예제파일 다운로드]</a>
 
 `examples/notebooks` 폴더에서 예제코드를 확인하고 테스트할 수 있음  
 `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
