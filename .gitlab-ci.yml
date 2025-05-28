@@ -59,6 +59,9 @@ build_wheels_linux:
 release:
   stage: release
   image: curlimages/curl
+  needs:
+    - job: build_wheels_linux
+      artifacts: true
   only:
     - tags
   script:
