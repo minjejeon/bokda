@@ -41,13 +41,9 @@
     - `data/`: 예제 코드 실행에 필요한 데이터 디렉토리
     - `notebooks/`: 모형 및 분석도구별 예제 코드(.ipynb) 디렉토리
 
-- `manual/`: 라이브러리가 지원하는 모형에 대한 자세한 설명이 기재된 문서 디렉토리(지속 업데이트 예정)
-
-- `docs/`: bok-da 설치 매뉴얼(마크다운 및 pdf), 개발 가이드 매뉴얼
+- `docs/`: (`docs/manual`)라이브러리가 지원하는 모형에 대한 자세한 설명이 기재된 문서 디렉토리, (`docs/install`)bok-da 설치 매뉴얼(마크다운 및 pdf), (`docs/dev`)개발 가이드 매뉴얼 포함
 
 - `README.md`: bok-da 리파지토리의 readme 문서
-
-- `Dev Guide.md`: 라이브러리 도구 개발 가이드 문서
 
 - `pyproject.toml`, `setup.py`, `MANIFEXT.in`: bok-da 패키지 빌드를 위한 파일  
 
@@ -55,7 +51,7 @@
 
 # BIDAS 환경에서 bok-da 라이브러리 설치 및 사용
 
-> bok-da 라이브러리를 BIDAS 환경에서 설치하고 사용하는 방법에는 I. `배포판` 설치와 II. `gitlab repository`를 `clone`해 `수정가능모드`로 설치하는 방법 두가지가 있습니다. 기능 확장을 위해 소스코드 수정이 필요한 경우에는 수정가능모드로 설치하는 것을 권장합니다.
+> bok-da 라이브러리를 BIDAS 환경에서 설치하고 사용하는 방법에는 I. `배포판` 설치와 II. `gitlab repository`를 `clone`해 `editable mode(개발모드)`로 설치하는 방법 두가지가 있습니다. 기능 확장을 위해 소스코드 수정이 필요한 경우에는 수정가능모드로 설치하는 것을 권장합니다.
 
 ## I. 배포판 설치
 
@@ -72,11 +68,6 @@
 ```bash
 pip install bok-da
 ```
-**(예제코드 및 매뉴얼 불러오기)** Terminal에서 아래 명령어 실행
-```bash
-bokda-import-example_manual
-```
-`examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
 
 ## II. Gitlab repository를 clone해 editable mode(개발모드)로 설치
 
@@ -89,22 +80,46 @@ git clone https://bidas-gitlab.boknet.intra/digitaltech/bok_library.git
 ```
 [//]: #![image](img/git_clone.PNG)
 
-## 2. editable mode` 설치
+## 2. editable mode 설치
 Jupyterlab terminal에서 아래 명령어 순서대로 실행
 ```bash
 cd bok_library
 pip install cython-3.1.1-py3-none-any.whl
 pip install -e .
 ```
-`examples/notebooks`폴더의 예제코드와 `manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
+`examples/notebooks`폴더의 예제코드와 `docs/manual`폴더의 모형 매뉴얼을 참고해서 라이브러리 활용
 
 [//]: #![image](img/bok_installation.PNG)
 
 <br>
 
-# 개인PC(로컬) 환경에서 bok-da 라이브러리 설치(외부망)
+# bok-da 라이브러리 사용
 
-> 외부망 개인 PC 환경(Anaconda 배포판 파이썬을 사용하는 JupyterLab 환경)에서 bok-da 라이브러리를 설치하는 방법을 설명하는 매뉴얼입니다.
+1. jupyter lab에서 새 Python 노트북 파일(.ipynb 확장자) 열기
+
+2. 노트북 셀에서 아래와 같이 코드 입력하여 bok-da 라이브러리 불러오기
+    ```python
+    import bok_da as bd
+    ```
+
+<br>
+
+# 활용 예제코드 및 매뉴얼 불러오기
+
+jupyter lab 터미널에서 아래 명령어를 실행하면, 예제코드, 데이터, 매뉴얼 폴더가 생성됨
+```bash
+bokda-copy-examples_manual
+```
+
+`examples/notebooks` 폴더에서 예제코드를 확인하고 테스트할 수 있음  
+`examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
+`manual` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음
+
+<br>
+
+# 한국은행 데이터 분석 라이브러리(bok-da) 사용 매뉴얼 (인터넷망)
+
+> 인터넷망 개인 PC 환경(Anaconda 배포판 파이썬을 사용하는 JupyterLab 환경)에서 bok-da 라이브러리를 설치하고 사용하는 방법을 안내하는 매뉴얼입니다.
 
 ---
 
@@ -114,9 +129,7 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
 
 1. Anaconda 배포판 다운로드 사이트에서 운영체제에 맞는 설치 파일 다운로드  
    - https://www.anaconda.com/download  
-
 2. 설치가 완료되면, **Anaconda Prompt** 실행  
-
 3. Anaconda Prompt에서 가상환경 생성  
    ```bash
    conda create -n <환경이름> python=<버전>
@@ -151,23 +164,46 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
 1. 새로운 작업 디렉토리(`bok_library`) 생성  
    예시: `C:/Users/BOK/Desktop/bok_library`
 
-2. `python-wheels-windows.zip`파일을 `bok_library` 폴더로 이동 후 압축해제
+2. `X 드라이브`의 `PC\999.한국은행 데이터 분석 라이브러리(bok-da)`에서 `python-wheels-windows.zip`과 `cython-3.1.1-py3-none-any.whl`파일을 `bok_library` 폴더로 이동 후 `zip`파일 압축해제
 
 3. jupyter lab 터미널 실행 후 작업 디렉토리 경로 지정  
    - jupyter lab의 `Launcher` 탭에서 `Terminal` 클릭
    - (터미널에서) `cd Desktop/bok_library`
 
-4. jupyter lab 터미널에서 가상환경의 파이썬 버전에 맞는 bok-da 휠파일 설치  
+4. jupyter lab 터미널에서 가상환경의 파이썬 버전에 맞는 bok-da 휠파일과 cython 설치  
    예시: 파이썬 버전이 3.12인 경우,
    ```bash
+   pip install cython-3.1.1-py3-none-any.whl
    pip install bok_da-0.3.1-cp312-cp312-win_amd64.whl
    ```
 
+## IV. bok-da 라이브러리 사용
+
+1. jupyter lab에서 새 Python 노트북 파일(.ipynb 확장자) 열기
+
+2. 노트북 셀에서 아래와 같이 코드 입력하여 bok-da 라이브러리 불러오기
+    ```python
+    import bok_da as bd
+    ```
+    또는 필요한 클래스, 함수만 불러올 수 있음(예시: 시계열분석 패키지(ts)의 LBVAR 모듈에서 Adaptive LBVAR 모형 추정 클래스 불러오기)
+    ```python
+    from bok_da.ts.lbvar import LBVAR_Adaptive
+    ```
+
+## V. 예제코드 및 매뉴얼 활용
+
+1. `X:\PC\999.한국은행 데이터 분석 라이브러리(bok-da)`의 `examples`, `docs` 폴더 참고.
+
+2. `examples/notebooks` 폴더에 분석기능별 활용예제를 수록하였음  
+   `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
+   `docs/reference` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음  
+   `docs/dev` 폴더에 코딩 스타일 관련 가이드라인을 수록
+
 <br>
 
-# 개인PC(로컬) 환경에서 bok-da 라이브러리 설치(내부망)
+# 한국은행 데이터 분석 라이브러리(bok-da) 사용 매뉴얼(내부망)
 
-> 내부망 개인 PC 환경(Anaconda 배포판 파이썬을 사용하는 JupyterLab 환경)에서 bok-da 라이브러리를 설치하는 방법을 설명하는 매뉴얼입니다.
+> 내부망 개인 PC 환경(Anaconda 배포판 파이썬을 사용하는 JupyterLab 환경)에서 bok-da 라이브러리를 설치하고 사용하는 방법을 안내하는 매뉴얼입니다.
 
 ---
 
@@ -190,18 +226,17 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
 1. 새로운 작업 디렉토리(`bok_library`) 생성  
    예시: `D:/python_projects/bok_library`
 
-2. `python-wheels-windows.zip`파일을 `bok_library` 폴더로 이동 후 압축해제
+2. `S 드라이브`의 `PC\999.한국은행 데이터 분석 라이브러리(bok-da)`에서 `python-wheels-windows.zip`과 `cython-3.1.1-py3-none-any.whl`파일을 `bok_library` 폴더로 이동 후 `zip`파일 압축해제
 
 3. jupyter lab 터미널 실행 후 작업 디렉토리 경로 지정  
 
-4. jupyter lab 터미널에서 bok-da 휠파일 설치  
+4. jupyter lab 터미널에서 cython과 bok-da 휠파일 설치  
    ```bash
+   pip install cython-3.1.1-py3-none-any.whl
    pip install bok_da-0.3.1-cp311-cp311-win_amd64.whl
    ```
 
-<br>
-
-# bok-da 라이브러리 사용
+## IV. bok-da 라이브러리 사용
 
 1. jupyter lab에서 새 Python 노트북 파일(.ipynb 확장자) 열기
 
@@ -209,19 +244,19 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
     ```python
     import bok_da as bd
     ```
+    또는 필요한 클래스, 함수만 불러올 수 있음(예시: 시계열분석 패키지(ts)의 LBVAR 모듈에서 Adaptive LBVAR 모형 추정 클래스 불러오기)
+    ```python
+    from bok_da.ts.lbvar import LBVAR_Adaptive
+    ```
 
-<br>
+## V. 예제코드 및 매뉴얼 활용
 
-# 활용 예제코드 및 매뉴얼 불러오기
+1. `S:\PC\999.한국은행 데이터 분석 라이브러리(bok-da)`의 `examples`, `docs` 폴더 참고.
 
-jupyter lab 터미널에서 아래 명령어를 실행하면, 예제코드, 데이터, 매뉴얼 폴더가 생성됨
-```bash
-bokda-copy-examples_manual
-```
-
-`examples/notebooks` 폴더에서 예제코드를 확인하고 테스트할 수 있음  
-`examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
-`manual` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음
+2. `examples/notebooks` 폴더에 분석기능별 활용예제를 수록하였음  
+   `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
+   `docs/reference` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음  
+   `docs/dev` 폴더에 코딩 스타일 관련 가이드라인을 수록
 
 <br>
 

@@ -23,12 +23,13 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
 1. 새로운 작업 디렉토리(`bok_library`) 생성  
    예시: `D:/python_projects/bok_library`
 
-2. `python-wheels-windows.zip`파일을 `bok_library` 폴더로 이동 후 압축해제
+2. `S 드라이브`의 `PC\999.한국은행 데이터 분석 라이브러리(bok-da)`에서 `python-wheels-windows.zip`과 `cython-3.1.1-py3-none-any.whl`파일을 `bok_library` 폴더로 이동 후 `zip`파일 압축해제
 
 3. jupyter lab 터미널 실행 후 작업 디렉토리 경로 지정  
 
-4. jupyter lab 터미널에서 bok-da 휠파일 설치  
+4. jupyter lab 터미널에서 cython과 bok-da 휠파일 설치  
    ```bash
+   pip install cython-3.1.1-py3-none-any.whl
    pip install bok_da-0.3.1-cp311-cp311-win_amd64.whl
    ```
 
@@ -40,14 +41,16 @@ Anaconda 배포판 파이썬 환경(Python 버전 3.9 이상) 준비
     ```python
     import bok_da as bd
     ```
+    또는 필요한 클래스, 함수만 불러올 수 있음(예시: 시계열분석 패키지(ts)의 LBVAR 모듈에서 Adaptive LBVAR 모형 추정 클래스 불러오기)
+    ```python
+    from bok_da.ts.lbvar import LBVAR_Adaptive
+    ```
 
-## V. 활용 예제코드 및 매뉴얼 불러오기
+## V. 예제코드 및 매뉴얼 활용
 
-1. jupyter lab 터미널에서 아래 명령어를 실행하면, 예제코드, 데이터, 매뉴얼 폴더가 생성됨
-   ```bash
-   bokda-copy-examples_manual
-   ```
+1. `S:\PC\999.한국은행 데이터 분석 라이브러리(bok-da)`의 `examples`, `docs` 폴더 참고.
 
-2. `examples/notebooks` 폴더에서 예제코드를 확인하고 테스트할 수 있음  
+2. `examples/notebooks` 폴더에 분석기능별 활용예제를 수록하였음  
    `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
-   `manual` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음
+   `docs/reference` 폴더에 모형 사용 및 하이퍼파라미터 옵션에 대한 설명이 있음  
+   `docs/dev` 폴더에 코딩 스타일 관련 가이드라인을 수록
