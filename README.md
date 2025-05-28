@@ -104,12 +104,9 @@ pip install -e .
 
 <br>
 
-# 활용 예제코드 및 매뉴얼 불러오기
+# 예제코드 및 매뉴얼 활용
 
-jupyter lab 터미널에서 아래 명령어를 실행하면, 예제코드, 데이터, 매뉴얼 폴더가 생성됨
-```bash
-bokda-copy-examples_manual
-```
+bok-da 리포지터리의 `docs`와 `examples` 폴더를 참고하거나, 해당 폴더의 압축파일을 다운로드한 후, 작업 디렉토리에 해제하여 활용<a href="https://bidas-s3.boknet.intra/newtech/public/bok_lib/bok-da-docs-examples-v0.3.1.7z" download>[예제파일 다운로드]</a> :nose:
 
 `examples/notebooks` 폴더에서 예제코드를 확인하고 테스트할 수 있음  
 `examples/data` 폴더에 예제코드에서 사용하는 데이터가 수록되어 있음  
