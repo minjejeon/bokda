@@ -168,7 +168,22 @@ def var(y: pd.DataFrame, lag: int=None, h: int=None):
     '''
     P=lag
     H=h
-    y = np.array(y)
+    
+    # Store original DataFrame info
+    if isinstance(y, pd.DataFrame):
+        col_names = list(y.columns)
+        index = y.index
+        y_array = np.array(y)
+    else:
+        y_array = np.array(y)
+        if y_array.shape[1] < 2:
+            y_array = y_array.reshape(-1,1)
+            col_names = ['y']
+        else:
+            col_names = [f'y{i+1}' for i in range(y_array.shape[1])]
+        index = None
+    
+    y = y_array
     if y.shape[1] < 2 :
         y = y.reshape(-1,1)
         print("y 변수가 단변수 (univariate) 입니다.")
@@ -224,7 +239,55 @@ def var(y: pd.DataFrame, lag: int=None, h: int=None):
 
         Y_predm = Y_predm + np.kron(ones(H, 1), Y_.T)  # 표본평균 보정(+)해주기
 
-    return VarResult(phi_hat=phi_hat, omega_hat=Omega_hat, f_mat=F, u_hat=U_hat, y0=Y0, y_lag=Y_lag, y_pred=Y_predm, lag=P)
+    # Convert numpy arrays to DataFrames
+    # phi_hat DataFrame
+    phi_index = []
+    for i in range(P):
+        for var in col_names:
+            phi_index.append(f'Lag{i+1}_{var}')
+    phi_hat_df = pd.DataFrame(phi_hat, columns=col_names, index=phi_index)
+    
+    # omega_hat DataFrame
+    omega_hat_df = pd.DataFrame(Omega_hat, columns=col_names, index=col_names)
+    
+    # f_mat DataFrame
+    f_mat_col_names = []
+    for i in range(P):
+        for var in col_names:
+            f_mat_col_names.append(f'Lag{i+1}_{var}')
+    f_mat_df = pd.DataFrame(F, columns=f_mat_col_names, index=f_mat_col_names)
+    
+    # u_hat DataFrame
+    if index is not None:
+        u_hat_index = index[P:]
+    else:
+        u_hat_index = range(T-P)
+    u_hat_df = pd.DataFrame(U_hat, columns=col_names, index=u_hat_index)
+    
+    # y0 DataFrame
+    y0_df = pd.DataFrame(Y0, columns=col_names, index=u_hat_index)
+    
+    # y_lag DataFrame
+    y_lag_col_names = []
+    for i in range(P):
+        for var in col_names:
+            y_lag_col_names.append(f'Lag{i+1}_{var}')
+    y_lag_df = pd.DataFrame(Y_lag, columns=y_lag_col_names, index=u_hat_index)
+    
+    # y_pred DataFrame
+    if Y_predm is not None:
+        if index is not None and hasattr(index, 'freq') and index.freq is not None:
+            # Create future dates
+            last_date = index[-1]
+            pred_index = pd.date_range(start=last_date, periods=H+1, freq=index.freq)[1:]
+        else:
+            pred_index = range(H)
+        y_pred_df = pd.DataFrame(Y_predm, columns=col_names, index=pred_index)
+    else:
+        y_pred_df = None
+
+    return VarResult(phi_hat=phi_hat_df, omega_hat=omega_hat_df, f_mat=f_mat_df, u_hat=u_hat_df, 
+                     y0=y0_df, y_lag=y_lag_df, y_pred=y_pred_df, lag=P)
 
 
 def B0invSolve(phi_hat, Omega_hat, restrict):
@@ -239,6 +302,12 @@ def B0invSolve(phi_hat, Omega_hat, restrict):
     Returns:
         B0inv : 구조형 VAR(p) 모형의 식별에 사용되는 B0의 역행렬 (B0inv)
     '''
+    # Convert to numpy arrays if DataFrames
+    if hasattr(phi_hat, 'values'):
+        phi_hat = phi_hat.values
+    if hasattr(Omega_hat, 'values'):
+        Omega_hat = Omega_hat.values
+    
     # 1. Short-run Restriction
     if restrict == 'short':
         B0inv = chol(Omega_hat).T
@@ -278,6 +347,10 @@ def irf_estimate(F,p,H,B0inv):
     Returns:
         Theta : 추정된 충격반응함수, H+1 by K^2
     '''
+    # Convert to numpy array if DataFrame
+    if hasattr(F, 'values'):
+        F = F.values
+    
     K = rows(B0inv)
     FF = eye(p*K)
     vecB0inv = vec(B0inv.T)
@@ -333,12 +406,14 @@ class VectorAutoRegression:
     
     def variance_decomposition(self, data, irf: str='short', h: int=16, verbose: bool=False, figsize=(20,5)):
         self.res = var(data, lag=self.lag, h=h)
-        self.result = var_decomp(self.res.phi_hat, self.res.omega_hat, self.res.f_mat, irf, self.lag, h, verbose, figsize, col_names=data.columns)
+        self.result = var_decomp(np.array(self.res.phi_hat), np.array(self.res.omega_hat), np.array(self.res.f_mat), 
+                                 irf, self.lag, h, verbose, figsize, col_names=data.columns)
         return self.result
             
     def historical_decomposition(self, data, irf: str='short', verbose: bool=False, figsize=(20,5)):
         self.res = var(data, lag=self.lag)
-        self.result = hist_decomp(data, self.res.phi_hat, self.res.omega_hat, self.res.f_mat, self.res.u_hat, irf, self.lag, verbose, figsize)
+        self.result = hist_decomp(data, np.array(self.res.phi_hat), np.array(self.res.omega_hat), 
+                                  np.array(self.res.f_mat), np.array(self.res.u_hat), irf, self.lag, verbose, figsize)
         return self.result
             
 
@@ -377,8 +452,54 @@ class VectorAutoRegression:
 
 class VarIrfResult:
     def __init__(self, **kwargs):
+        # First set all kwargs as attributes
         for key, value in kwargs.items():
             setattr(self, key, value)
+        
+        # Convert IRF results to DataFrames with MultiIndex columns
+        if hasattr(self, '_VarIrfResult__col_names'):
+            col_names = self._VarIrfResult__col_names
+            K = len(col_names)
+            H = self._VarIrfResult__h
+            
+            # Create MultiIndex for IRF results
+            response_vars = []
+            shock_vars = []
+            for i in range(K):  # Response variable
+                for j in range(K):  # Shock variable
+                    response_vars.append(col_names[i])
+                    shock_vars.append(col_names[j])
+            
+            multi_index = pd.MultiIndex.from_arrays([response_vars, shock_vars], 
+                                                    names=['Response', 'Shock'])
+            
+            # Convert IRF matrices to DataFrames
+            self.theta = pd.DataFrame(self.theta.T, columns=multi_index, 
+                                     index=range(H + 1))
+            self.theta.index.name = 'Period'
+            
+            self.cilv = pd.DataFrame(self.cilv.T, columns=multi_index, 
+                                    index=range(H + 1))
+            self.cilv.index.name = 'Period'
+            
+            self.cihv = pd.DataFrame(self.cihv.T, columns=multi_index, 
+                                    index=range(H + 1))
+            self.cihv.index.name = 'Period'
+            
+            self.cum_theta = pd.DataFrame(self.cum_theta.T, columns=multi_index, 
+                                         index=range(H + 1))
+            self.cum_theta.index.name = 'Period'
+            
+            self.cum_cilv = pd.DataFrame(self.cum_cilv.T, columns=multi_index, 
+                                        index=range(H + 1))
+            self.cum_cilv.index.name = 'Period'
+            
+            self.cum_cihv = pd.DataFrame(self.cum_cihv.T, columns=multi_index, 
+                                        index=range(H + 1))
+            self.cum_cihv.index.name = 'Period'
+            
+            # phi_hat and omega_hat are already DataFrames from var()
+            # f_mat, u_hat, y0, y_lag, y_pred are also already DataFrames from var()
             
     def get_description(self):
         desc = {
@@ -404,10 +525,45 @@ class VarIrfResult:
     #def plot_irf(self, restrict: str='short', cum: bool=False, h: int=16, title: bool=True, title_fontsize: int=14):
     def plot_irf(self, cum: bool=False, title: bool=True, title_fontsize: int=14):
         if cum:
-            self._plot_irf(self.cum_theta, self.cum_cihv, self.cum_cilv, self.__restrict, cum, self.__h, title, title_fontsize)
+            # Convert DataFrames back to numpy arrays for plotting
+            theta_array = self.cum_theta.values.T
+            cihv_array = self.cum_cihv.values.T
+            cilv_array = self.cum_cilv.values.T
+            self._plot_irf(theta_array, cihv_array, cilv_array, self.__restrict, cum, self.__h, title, title_fontsize)
         else:
-            self._plot_irf(self.theta, self.cihv, self.cilv, self.__restrict, cum, self.__h, title, title_fontsize)
+            # Convert DataFrames back to numpy arrays for plotting
+            theta_array = self.theta.values.T
+            cihv_array = self.cihv.values.T
+            cilv_array = self.cilv.values.T
+            self._plot_irf(theta_array, cihv_array, cilv_array, self.__restrict, cum, self.__h, title, title_fontsize)
         
+    def to_dataframe(self, cum: bool=False, include_ci: bool=True):
+        """[Deprecated] IRF results are now automatically stored as DataFrames.
+        
+        This method is kept for backward compatibility.
+        You can directly access the results as DataFrames:
+        - res.theta: IRF values
+        - res.cilv, res.cihv: Confidence intervals
+        - res.cum_theta: Cumulative IRF values
+        - res.cum_cilv, res.cum_cihv: Cumulative confidence intervals
+        - res.phi_hat: VAR coefficients
+        - res.omega_hat: Variance-covariance matrix
+        
+        All IRF DataFrames have MultiIndex columns with:
+        - Level 0: Response variable names
+        - Level 1: Shock variable names
+        """
+        import warnings
+        warnings.warn("to_dataframe() is deprecated. Results are now automatically stored as DataFrames. "
+                     "Access them directly via res.theta, res.cilv, etc.", DeprecationWarning)
+        
+        if cum:
+            return self.cum_theta if not include_ci else pd.concat([self.cum_theta, self.cum_cilv, self.cum_cihv], 
+                                                                   keys=['IRF', 'Lower', 'Upper'], axis=1)
+        else:
+            return self.theta if not include_ci else pd.concat([self.theta, self.cilv, self.cihv], 
+                                                               keys=['IRF', 'Lower', 'Upper'], axis=1)
+    
     def _plot_irf(self, theta, cihv, cilv, restrict, cum, h, title, title_fontsize):
         
         col_names = self.__col_names
@@ -489,6 +645,7 @@ def var_irf_bootstrap(y, lag: int=1, h: int=16, irf: str='short', q: float=90, n
     restrict = irf
     qt = q
     col_names = y.columns
+    index = y.index
     
     y = np.array(y)
     if y.shape[1] < 2 :
@@ -498,14 +655,14 @@ def var_irf_bootstrap(y, lag: int=1, h: int=16, irf: str='short', q: float=90, n
     T,K = y.shape
     
     # <Step 1>: Estimate Reduced-form VAR (with demeaning)
-    res = var(y,p)
-    phi_hat = res.phi_hat
-    Omega_hat = res.omega_hat
-    F = res.f_mat
-    U_hat = res.u_hat
-    Y0 = res.y0
-    Y_lag = res.y_lag
-    Y_predm = res.y_pred
+    res = var(df,p)  # Pass DataFrame to maintain column names
+    phi_hat = np.array(res.phi_hat)
+    Omega_hat = np.array(res.omega_hat)
+    F = np.array(res.f_mat)
+    U_hat = np.array(res.u_hat)
+    Y0 = np.array(res.y0)
+    Y_lag = np.array(res.y_lag)
+    Y_predm = np.array(res.y_pred) if res.y_pred is not None else None
     phat = res.lag
 
     psave = p
@@ -647,7 +804,8 @@ def var_irf_bootstrap(y, lag: int=1, h: int=16, irf: str='short', q: float=90, n
         plt.show()
     
     return VarIrfResult(theta=Theta,  cilv=CILv, cihv=CIHv, cum_theta=cumTheta, cum_cilv=cumCILv, cum_cihv=cumCIHv,
-                        phi_hat = phi_hat, omega_hat=Omega_hat, f_mat=F, u_hat=U_hat, y0=Y0, y_lag=Y_lag, y_pred=Y_predm, lag=phat,
+                        phi_hat = res.phi_hat, omega_hat=res.omega_hat, f_mat=res.f_mat, u_hat=res.u_hat, 
+                        y0=res.y0, y_lag=res.y_lag, y_pred=res.y_pred, lag=phat,
                         _VarIrfResult__restrict=restrict, _VarIrfResult__lag=lag, _VarIrfResult__h=h, _VarIrfResult__df=df,
                         _VarIrfResult__col_names=col_names, _VarIrfResult__phi_hat=phi_hat, _VarIrfResult__omega_hat=Omega_hat,
                         _VarIrfResult__f_mat=F, _VarIrfResult__u_hat=U_hat)
@@ -655,8 +813,54 @@ def var_irf_bootstrap(y, lag: int=1, h: int=16, irf: str='short', q: float=90, n
 
 class VarGeneralizedIrfResult:
     def __init__(self, **kwargs):
+        # First set all kwargs as attributes
         for key, value in kwargs.items():
             setattr(self, key, value)
+        
+        # Convert IRF results to DataFrames with MultiIndex columns
+        if hasattr(self, '_VarGeneralizedIrfResult__col_names'):
+            col_names = self._VarGeneralizedIrfResult__col_names
+            K = len(col_names)
+            H = self._VarGeneralizedIrfResult__h
+            
+            # Create MultiIndex for IRF results
+            response_vars = []
+            shock_vars = []
+            for i in range(K):  # Response variable
+                for j in range(K):  # Shock variable
+                    response_vars.append(col_names[i])
+                    shock_vars.append(col_names[j])
+            
+            multi_index = pd.MultiIndex.from_arrays([response_vars, shock_vars], 
+                                                    names=['Response', 'Shock'])
+            
+            # Convert IRF matrices to DataFrames
+            self.theta = pd.DataFrame(self.theta.T, columns=multi_index, 
+                                     index=range(H + 1))
+            self.theta.index.name = 'Period'
+            
+            self.cilv = pd.DataFrame(self.cilv.T, columns=multi_index, 
+                                    index=range(H + 1))
+            self.cilv.index.name = 'Period'
+            
+            self.cihv = pd.DataFrame(self.cihv.T, columns=multi_index, 
+                                    index=range(H + 1))
+            self.cihv.index.name = 'Period'
+            
+            self.cum_theta = pd.DataFrame(self.cum_theta.T, columns=multi_index, 
+                                         index=range(H + 1))
+            self.cum_theta.index.name = 'Period'
+            
+            self.cum_cilv = pd.DataFrame(self.cum_cilv.T, columns=multi_index, 
+                                        index=range(H + 1))
+            self.cum_cilv.index.name = 'Period'
+            
+            self.cum_cihv = pd.DataFrame(self.cum_cihv.T, columns=multi_index, 
+                                        index=range(H + 1))
+            self.cum_cihv.index.name = 'Period'
+            
+            # phi_hat and omega_hat are already DataFrames from var()
+            # f_mat, u_hat, y0, y_lag, y_pred are also already DataFrames from var()
             
     def get_description(self):
         desc = {
@@ -677,9 +881,42 @@ class VarGeneralizedIrfResult:
     
     def plot_irf(self, cum: bool=False, title: bool=True, title_fontsize: int=14):
         if cum:
-            self._plot_girf(self.cum_theta, self.cum_cihv, self.cum_cilv, cum, self.__h, title, title_fontsize)
+            # Convert DataFrames back to numpy arrays for plotting
+            theta_array = self.cum_theta.values.T
+            cihv_array = self.cum_cihv.values.T
+            cilv_array = self.cum_cilv.values.T
+            self._plot_girf(theta_array, cihv_array, cilv_array, cum, self.__h, title, title_fontsize)
         else:
-            self._plot_girf(self.theta, self.cihv, self.cilv, cum, self.__h, title, title_fontsize)
+            # Convert DataFrames back to numpy arrays for plotting
+            theta_array = self.theta.values.T
+            cihv_array = self.cihv.values.T
+            cilv_array = self.cilv.values.T
+            self._plot_girf(theta_array, cihv_array, cilv_array, cum, self.__h, title, title_fontsize)
+    
+    def to_dataframe(self, cum: bool=False, include_ci: bool=True):
+        """[Deprecated] Generalized IRF results are now automatically stored as DataFrames.
+        
+        This method is kept for backward compatibility.
+        You can directly access the results as DataFrames:
+        - res.theta: Generalized IRF values
+        - res.cilv, res.cihv: Confidence intervals
+        - res.cum_theta: Cumulative generalized IRF values
+        - res.cum_cilv, res.cum_cihv: Cumulative confidence intervals
+        
+        All IRF DataFrames have MultiIndex columns with:
+        - Level 0: Response variable names
+        - Level 1: Shock variable names
+        """
+        import warnings
+        warnings.warn("to_dataframe() is deprecated. Results are now automatically stored as DataFrames. "
+                     "Access them directly via res.theta, res.cilv, etc.", DeprecationWarning)
+        
+        if cum:
+            return self.cum_theta if not include_ci else pd.concat([self.cum_theta, self.cum_cilv, self.cum_cihv], 
+                                                                   keys=['IRF', 'Lower', 'Upper'], axis=1)
+        else:
+            return self.theta if not include_ci else pd.concat([self.theta, self.cilv, self.cihv], 
+                                                               keys=['IRF', 'Lower', 'Upper'], axis=1)
         
     def _plot_girf(self, theta, cihv, cilv, cum, h, title, title_fontsize):
         
@@ -743,10 +980,13 @@ def var_girf_bootstrap(y, lag: int=1, h: int=16, q: float=90, n: int=2000, verbo
         <5 단계>: 충격반응함수를 추정
         <6 단계>: <3 단계>부터 <5단계>까지 반복 한 이후 신뢰구간을 도출
     '''
+    df = y.copy()
     p = lag
     H = h
     qt = q
     col_names = y.columns
+    index = y.index
+    
     y = np.array(y)
     if y.shape[1] < 2 :
         y = y.reshape(-1,1)
@@ -755,14 +995,14 @@ def var_girf_bootstrap(y, lag: int=1, h: int=16, q: float=90, n: int=2000, verbo
     T,K = y.shape
 
     # <Step 1>: Estimate Reduced-form VAR (with demeaning)
-    res = var(y, p)
-    phi_hat = res.phi_hat
-    Omega_hat = res.omega_hat
-    F = res.f_mat
-    U_hat = res.u_hat
-    Y0 = res.y0
-    Y_lag = res.y_lag
-    Y_predm = res.y_pred
+    res = var(df, p)  # Pass DataFrame to maintain column names
+    phi_hat = np.array(res.phi_hat)
+    Omega_hat = np.array(res.omega_hat)
+    F = np.array(res.f_mat)
+    U_hat = np.array(res.u_hat)
+    Y0 = np.array(res.y0)
+    Y_lag = np.array(res.y_lag)
+    Y_predm = np.array(res.y_pred) if res.y_pred is not None else None
     phat = res.lag
     
     psave = p
@@ -900,7 +1140,8 @@ def var_girf_bootstrap(y, lag: int=1, h: int=16, q: float=90, n: int=2000, verbo
         plt.show()
     
     return VarGeneralizedIrfResult(theta=Theta, cilv=CILv, cihv=CIHv, cum_theta=cumTheta, cum_cilv=cumCILv, cum_cihv=cumCIHv,
-                                   phi_hat = phi_hat, omega_hat=Omega_hat, f_mat=F, u_hat=U_hat, y0=Y0, y_lag=Y_lag, y_pred=Y_predm, lag=phat,
+                                   phi_hat = res.phi_hat, omega_hat=res.omega_hat, f_mat=res.f_mat, u_hat=res.u_hat, 
+                                   y0=res.y0, y_lag=res.y_lag, y_pred=res.y_pred, lag=phat,
                                    _VarGeneralizedIrfResult__lag=lag, _VarGeneralizedIrfResult__h=h,
                                    _VarGeneralizedIrfResult__col_names=col_names, _VarGeneralizedIrfResult__phi_hat=phi_hat, _VarGeneralizedIrfResult__omega_hat=Omega_hat,
                                    _VarGeneralizedIrfResult__f_mat=F, _VarGeneralizedIrfResult__u_hat=U_hat)
@@ -918,9 +1159,10 @@ def var_decomp(phi_hat, Omega_hat, F, irf, lag, h, verbose, figsize=(20, 5), col
         H : 예측 오차 도출 시 사용되는 예측 시차
         
     Returns:
-        ForVar : 예측 오차 분산 분해 결과 (K by (H+1))
-            - K개의 행은 각 충격이 k번째 변수에 기여하는 정도
-            - (H+1)개의 열은 각 예측 시차
+        ForVar : 예측 오차 분산 분해 결과 DataFrame
+            - MultiIndex columns: (Response Variable, Shock Variable)
+            - Index: Forecast horizon (0 to H)
+            - Values: Contribution of each shock to forecast error variance
     '''
     p = lag
     H = h
@@ -944,21 +1186,34 @@ def var_decomp(phi_hat, Omega_hat, F, irf, lag, h, verbose, figsize=(20, 5), col
         Rvarmat = varmat / np.kron(ones(K,1), varmat.sum(axis=1)).T
         ForVar[:,h+1] = vec(Rvarmat.T).reshape(1,-1)
     
+    # Convert to DataFrame with MultiIndex columns
+    response_vars = []
+    shock_vars = []
+    for i in range(K):  # Response variable
+        for j in range(K):  # Shock variable
+            response_vars.append(col_names[i])
+            shock_vars.append(col_names[j])
+    
+    multi_index = pd.MultiIndex.from_arrays([response_vars, shock_vars], 
+                                            names=['Response', 'Shock'])
+    
+    # Create DataFrame
+    ForVar_df = pd.DataFrame(ForVar.T, columns=multi_index, index=range(H+1))
+    ForVar_df.index.name = 'Horizon'
+    
     if verbose:
         name = []
         for k in range(K):
-            #name1 = f"e_{k}"
             name1 = f'{col_names[k]}'
             name.append(name1)
 
         for k in range(1,K+1):
-            combined = pd.DataFrame(ForVar[(k-1)*K:k*K,:].T)
-            df_decomp = pd.DataFrame(combined)
+            # Extract data for specific response variable
+            response_var = col_names[k-1]
+            df_decomp = ForVar_df[response_var]
 
             variindex = list(range(0, H+1, 1))
             palette = sns.color_palette("muted", df_decomp.shape[1])
-
-            df_decomp.index = df_decomp.index + 1
 
             plt.figure(figsize=figsize)
 
@@ -974,7 +1229,7 @@ def var_decomp(phi_hat, Omega_hat, F, irf, lag, h, verbose, figsize=(20, 5), col
 
         plt.show()
     
-    return ForVar
+    return ForVar_df
 
 
 def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,5)):
@@ -989,7 +1244,10 @@ def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,
         restrict: 사용하고자하는 식별 방법 (short=단기제약, long=장기제약)
         
     Returns:
-        HDm : 각 반응변수에 대한 역사적 분해 결과
+        HD_df : 역사적 분해 결과 DataFrame
+            - MultiIndex columns: (Response Variable, Shock Variable)
+            - Index: Date (시계열 index)
+            - Values: 각 시점에서 각 충격이 반응변수에 미친 영향
     '''
     p = lag
     restrict = irf
@@ -1032,11 +1290,35 @@ def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,
 
     T1,K = U_hat.shape
     
+    # Convert to MultiIndex DataFrame
+    time_index = index[p+1:]  # Historical decomposition starts from p+1
+    
+    # Create MultiIndex columns (Response, Shock)
+    response_vars = []
+    shock_vars = []
+    data_list = []
+    
+    for ind_var in range(K):  # Response variable
+        HD = yhatm[:,ind_var,:]  # shape: (K, T-p-1)
+        for ind_shock in range(K):  # Shock variable
+            response_vars.append(col_names[ind_var])
+            shock_vars.append(col_names[ind_shock])
+            data_list.append(HD[ind_shock, :])
+    
+    # Create MultiIndex
+    multi_index = pd.MultiIndex.from_arrays([response_vars, shock_vars], 
+                                            names=['Response', 'Shock'])
+    
+    # Create DataFrame
+    HD_df = pd.DataFrame(np.array(data_list).T, 
+                        index=time_index, 
+                        columns=multi_index)
+    HD_df.index.name = 'Date'
+    
     if verbose:
         # Plotting
         name = []
         for k in range(K):
-            #name1 = f"e_{k}"
             name1 = f'{col_names[k]}'
             name.append(name1)
 
@@ -1046,7 +1328,7 @@ def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,
             variindex = list(range(1,T1,1))
             palette = sns.color_palette("muted", df_decomp.shape[1])
             df_decomp.index = df_decomp.index + 1
-            #df_decomp.index = index[p+1:]
+            
             plt.figure(figsize=figsize)
 
             bottom_pos = np.zeros(T1-1)
@@ -1058,7 +1340,6 @@ def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,
                 bottom = np.where(values >= 0, bottom_pos, bottom_neg)
 
                 plt.bar(variindex, values, bottom=bottom, color=color)
-                #plt.xlim([-1,T1+1])
                 plt.title(f'Historical Decomposition for {col_names[ind_var]}')
 
                 bottom_pos = np.where(values >= 0, bottom_pos + values, bottom_pos)
@@ -1073,6 +1354,4 @@ def hist_decomp(y, phi_hat, Omega_hat, F, U_hat, irf, lag, verbose, figsize=(20,
 
         plt.show()
     
-    HDm = yhatm
-    
-    return HDm
+    return HD_df
